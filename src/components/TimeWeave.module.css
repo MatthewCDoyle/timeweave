@@ -1,0 +1,29 @@
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.item {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.date {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.875rem;
+}
+
+.title {
+  margin: 0.25rem 0 0;
+  font-size: 1.2rem;
+}
+
+.description {
+  margin: 0.5rem 0 0;
+}
+
+.empty {
+  color: var(--ifm-color-emphasis-700);
+}
