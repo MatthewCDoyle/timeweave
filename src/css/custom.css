@@ -7,3 +7,48 @@
   --ifm-color-primary-lighter: #7e6eff;
   --ifm-color-primary-lightest: #9184ff;
 }
+
+.image-placeholder {
+  margin: 1.5rem 0;
+}
+
+.image-placeholder--center {
+  text-align: center;
+}
+
+.image-placeholder--wrap-right {
+  float: right;
+  width: 40%;
+  margin: 0.25rem 0 1rem 1.25rem;
+}
+
+.image-placeholder--wrap-left {
+  float: left;
+  width: 40%;
+  margin: 0.25rem 1.25rem 1rem 0;
+}
+
+.image-placeholder__frame {
+  border: 2px dashed #64748b;
+  border-radius: 10px;
+  background: #f5f3f0;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  min-height: 260px;
+  max-width: 250px;
+  max-height: 340px;
+}
+
+@media (max-width: 996px) {
+  .image-placeholder--wrap-right,
+  .image-placeholder--wrap-left {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

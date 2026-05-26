@@ -1,0 +1,80 @@
+{
+  "ai-workplace-integration": {
+    "title": "AI in the Workplace: Integration, Skills, and Career Impact",
+    "description": "Master AI integration in your workplace. Learn which AI tools to use daily, how to upskill, and position yourself as AI-savvy in your career.",
+    "primaryTopic": "Future of Work",
+    "tags": ["ai", "automation"],
+    "date": "2024-12-26",
+    "timeline": {
+      "year": 2024,
+      "quarter": "Q4",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "ath-future-tech-ai-overview": {
+    "title": "Artificial Intelligence: Overview and Types",
+    "description": "Overview of AI foundations and major AI system types.",
+    "primaryTopic": "AI",
+    "tags": ["ai", "machine-learning"],
+    "date": "2025-12-26",
+    "timeline": {
+      "year": 2024,
+      "quarter": "Q4",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "ath-future-tech-holography": {
+    "title": "Holography and Volumetric Display Technology",
+    "description": "Explore holography technology, volumetric visualization, and 3D projection systems.",
+    "primaryTopic": "realities",
+    "tags": ["holography", "volumetric-display"],
+    "date": "2025-12-26",
+    "timeline": {
+      "year": 2024,
+      "quarter": "Q4",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "ath-future-tech-metaverse-overview": {
+    "title": "The Metaverse: Synthesis of Reality Implementations",
+    "description": "Explore how the Metaverse synthesizes MR, AR, VR, and XR technologies.",
+    "primaryTopic": "realities",
+    "tags": ["metaverse", "spatial-computing"],
+    "date": "2025-12-26",
+    "timeline": {
+      "year": 2024,
+      "quarter": "Q4",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "ath-future-tech-nanotech-overview": {
+    "title": "Nanotechnology: Miniaturization and Molecular Manufacturing",
+    "description": "Explore nanotechnology's role in miniaturization, molecular manufacturing, and autonomous nanosystems.",
+    "primaryTopic": "nanotech",
+    "tags": ["nanotechnology", "molecular-manufacturing"],
+    "date": "2025-12-26",
+    "timeline": {
+      "year": 2034,
+      "quarter": "Q2",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "ath-future-tech-vr-overview": {
+    "title": "Virtual Reality and Immersive Technology Overview",
+    "description": "Explore virtual reality and immersive technologies that blur digital and physical worlds.",
+    "primaryTopic": "realities",
+    "tags": ["vr", "immersive-tech"],
+    "date": "2025-12-26",
+    "timeline": {
+      "year": 2024,
+      "quarter": "Q3",
+      "significance": "trend",
+      "category": "technology"
+    }
+  }
+}
