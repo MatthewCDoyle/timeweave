@@ -1,102 +1,66 @@
-# timeweave
+# Dashboard Export — Zebra Docs Agentic System
 
-This repository hosts a Docusaurus site for the Timeline tab feature.
+Drop-in bundle for the five-pod multi-agent dashboard + agent runtime.
+Exported from `zebra-aurora-docs-on-demand` on 2026-05-25.
 
-## Design Principles
+## What's inside
 
-### Information Density Model
+| Path | Purpose |
+|------|---------|
+| `src/components/DevDashboard/` | React dashboard UI, personas, panels, design tokens |
+| `src/pages/dev-dashboard.js` | Docusaurus page mount (gated by `siteConfig.customFields.isDev`) |
+| `src/agents/` | Five pod engines (editor/librarian/orchestrator/strategist/gatekeeper) + `thresholds.mjs` |
+| `scripts/` | Pod servers (3456–3460), activate scripts, build-report generator, validators, gates |
+| `schemas/pods/` | JSON Schemas for pod outputs (validated in CI) |
+| `.github/agents/` | Per-pod agent specs |
+| `.github/instructions/` | Cross-cutting instruction docs (applyTo globs) |
+| `.github/agent-actions.md` | Canonical action vocabulary |
+| `docs/dev-dashboard-contract.md` | Canonical pod ownership + data contract for dashboard metrics |
+| `.content/` | Style rules, rule registry/patterns, terminology map |
+| `static/data/` | Sample telemetry JSON (replace after first `build-report` run) |
+| `static/build-report.json` | Sample build report so the dashboard renders on first load |
+| `dashboard.config.js` | Frontmatter taxonomy schema |
+| `.env.example` | Env-var template (JIRA, GitHub, Clarity placeholders) |
+| `package.fragment.json` | Scripts + deps to merge into your repo's `package.json` |
 
-The timeline follows a logarithmic information density rule: as users move toward the "future" end of the timeline, card frequency should increase to reflect accelerating change.
+## Adoption steps
 
-- Deep Past (3.5B years ago - 1800): Epoch-defining events. Target density: ~1 card per era or major millennium.
-- Industrial Era (1800 - 2000): Infrastructure-defining events. Target density: ~1-2 cards per decade.
-- Now and Near Future (2020 - 2050): Convergence-defining events. Target density: ~3-5 cards per year.
-- Deep Future (2060+): Speculative-defining events. Target density: ~1 card per 5-year jump.
+1. **Unzip into your Docusaurus repo root.** Files land in their final paths.
+2. **Merge `package.fragment.json`** into your repo's `package.json` (scripts + deps).
+3. **Run** `npm install`.
+4. **Gate the dashboard.** In your `docusaurus.config.ts`, set:
+   ```ts
+   customFields: { isDev: process.env.NODE_ENV !== 'production' || process.env.BUILD_DEV === 'true' }
+   ```
+5. **Copy `.env.example` to `.env.local`** and fill in JIRA / GitHub keys.
+6. **Regenerate telemetry for your corpus:** `npm run build-report`.
+7. **Start everything:** `npm run dev:all` — Docusaurus + all 5 pod servers in one terminal.
+8. **Visit** `http://localhost:3000/dev-dashboard`.
 
-Example event types by era:
+## Portability notes (from source CLAUDE.md)
 
-- Deep Past: controlled fire, printing press.
-- Industrial Era: steam engine, transistor.
-- Now and Near Future: mRNA vaccines, room-temperature superconductors, AGI milestones.
-- Deep Future: Dyson swarm fragments, post-biological consciousness.
+- Pod engines are content-agnostic — they read `static/build-report.json`. No code changes needed.
+- File walkers in `*-activate.mjs` currently accept `.md` / `.mdx`. Extend to `.dita` / `.ditamap`
+  using `scripts/_dita-extractor.mjs` if your repo is DITA-source.
+- Policy thresholds live in `src/agents/thresholds.mjs` — tune per repo if needed.
+- Design tokens (`--space-*`, `--fs-*`, `--tap-target-min`, `--focus-ring`) sit at the top of
+  `src/components/DevDashboard/styles.module.css`. Don't go below `--fs-xs` (WCAG floor).
+- Action vocabulary is fixed: `AUTO_REMEDIATE` · `PROPOSE` · `CLICK_TO_FIX` · `FLAG` · `ESCALATE`.
+- Conflict priority: Gatekeeper > Librarian > Strategist > Editor.
 
-### Timeline Entry Model (Markdown-First)
+## What's NOT included
 
-Each timeline item should be a single markdown file in docs/timeline with frontmatter as the source of truth.
+- This repo's MDX content under `docs/` (corpus-specific).
+- `docusaurus.config.ts` (your repo already has one — just add `customFields.isDev`).
+- `node_modules/`, build outputs, `.docusaurus/`.
+- `.env.local` (secrets — use the included `.env.example` as your template).
 
-Core frontmatter fields:
+## Ports used by pod servers
 
-- title: string
-- slug: string
-- pillars: string[] (canonical technology pillar IDs; preferred domain taxonomy)
-- categories: string[] (supports multi-category timeline entries)
-- tags: string[] (keyword-level discovery)
-- timeline.startYear: number (required for timeline placement)
-- timeline.endYear: number (optional range end)
-- timeline.precision: "year" | "range" | "decade" | "era"
-- timeline.era: "deep-past" | "industrial" | "near-future" | "deep-future"
-- timeline.significance: string (example: foundation, trend, prediction)
-- links: [{ type, targetId, strength?, rationale? }] (typed relationships to other markdown entries)
-- evolution.evolvesFrom: string[] (upstream entries this item developed from)
-- evolution.enablesNext: string[] (downstream entries this item evolves into)
-- metapatterns: [{ id, role?, note? }] (cross-era dynamics attached to each entry)
-
-Notes:
-
-- Keep one markdown file per timeline entry.
-- Timeline placement and primary filtering remain date-first via timeline.startYear (and timeline.endYear where relevant).
-- Pillars are a secondary facet for optional filtering/grouping and must be provided as an array.
-- Use stable doc ids for links.targetId values so relationships remain valid over time.
-- relatedContent remains supported as a backward-compatible fallback and is auto-converted into typed related links.
-- Pillars are normalized through src/data/pillars.json aliases. Existing entries without pillars fall back to categories during loading.
-
-Canonical pillar IDs (src/data/pillars.json):
-
-- ai
-- xr-vr-ar-holography
-- immersive-tech
-- wearables-implantables
-- nanotech
-- printing-nanofabrication
-- advanced-materials
-- biotechnology
-- neurotechnology
-- robotics-autonomous-systems
-- autonomous-vehicles
-- smart-cities
-- internet-of-things
-- blockchain
-- energy
-- marine-oceanic-tech
-- agrotechnology
-- climate-geoengineering
-- space-colonization
-- transhumanism
-- quantum-technologies
-
-### Metapattern Considerations
-
-Track these metapatterns in entry frontmatter using metapatterns[].id and metapatterns[].note:
-
-- acceleration: Note whether this entry compresses innovation cycle time for downstream systems.
-- convergence: Document which domains merge and what new capability appears at the intersection.
-- abstraction-layers: Describe underlying dependencies and which higher-level behaviors become easier.
-- scale-expansion: Capture the primary impact scale and whether the entry unlocks expansion to a larger scale.
-- information-centrality: Explain the sensing, model, and feedback loops that make the system effective.
-- biological-digital-merger: Identify where biological states couple directly with digital control or inference.
-- energy-requirements: Record energy intensity, constraints, and infrastructure needed for deployment.
-- existential-inflection: Mark high-uncertainty boundaries where forecasts branch or lose reliability.
-
-## Development
-
-```bash
-nvm use
-npm install
-npm run start
-```
-
-## Build
-
-```bash
-npm run build
-```
+| Pod | Port |
+|-----|------|
+| Librarian | 3456 |
+| Editor | 3457 |
+| Orchestrator | 3458 |
+| Strategist | 3459 |
+| Gatekeeper | 3460 |

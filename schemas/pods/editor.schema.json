@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["pod", "runId", "snapshotDate", "violations", "readability"],
+  "properties": {
+    "pod": { "const": "EDITOR" },
+    "runId": { "type": "string", "minLength": 1 },
+    "snapshotDate": { "type": "string", "minLength": 1 },
+    "violations": { "type": "object" },
+    "readability": { "type": "object" }
+  },
+  "additionalProperties": true
+}

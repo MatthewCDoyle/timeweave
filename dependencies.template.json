@@ -1,0 +1,427 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Technology Dependency Graph",
+  "description": "Defines causal relationships between technology breakthroughs",
+  
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "version": { "type": "string", "default": "1.0" },
+        "lastUpdated": { "type": "string", "format": "date-time" },
+        "maintainer": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    
+    "nodes": {
+      "type": "object",
+      "description": "Technology nodes (events)",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "computing",
+              "energy",
+              "materials",
+              "biology",
+              "nanotechnology",
+              "physics",
+              "artificial-intelligence",
+              "quantum",
+              "infrastructure",
+              "other"
+            ]
+          },
+          "description": { "type": "string" },
+          "baselineP50Year": {
+            "type": "number",
+            "description": "Initial forecast (before dependency adjustment)"
+          },
+          "maturityLevel": {
+            "type": "string",
+            "enum": ["nascent", "emerging", "growing", "mature", "declining"],
+            "description": "Field maturity"
+          }
+        },
+        "required": ["title", "category"]
+      }
+    },
+    
+    "edges": {
+      "type": "array",
+      "description": "Dependencies (directed edges between nodes)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Event ID this dependency originates from"
+          },
+          "target": {
+            "type": "string",
+            "description": "Event ID this dependency points to"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "enabling",
+              "accelerating",
+              "inhibiting",
+              "alternative",
+              "amplifying"
+            ],
+            "description": "Type of dependency"
+          },
+          "strength": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "0–1, how critical is this dependency?"
+          },
+          "lagTime": {
+            "type": "number",
+            "description": "Years between source and target"
+          },
+          "cascadeMultiplier": {
+            "type": "number",
+            "description": "How much does source change propagate? (0–2)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Explanation of dependency"
+          },
+          "mutuallyExclusive": {
+            "type": "boolean",
+            "description": "Can both events occur? (true = one or the other)"
+          },
+          "feedbackLoop": {
+            "type": "boolean",
+            "description": "Is this part of a self-reinforcing cycle?"
+          }
+        },
+        "required": ["source", "target", "type"]
+      }
+    },
+    
+    "scenarios": {
+      "type": "object",
+      "description": "Alternative future paths (branching scenarios)",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "probability": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "P(this scenario occurs)"
+          },
+          "description": { "type": "string" },
+          "triggeringEvent": {
+            "type": "string",
+            "description": "Which event causes this scenario? (optional)"
+          },
+          "parameterOverrides": {
+            "type": "object",
+            "description": "How do parameters change in this scenario?",
+            "additionalProperties": { "type": "number" }
+          },
+          "cascadeEffects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "affectedEventId": { "type": "string" },
+                "deltaYears": { "type": "number" },
+                "explanation": { "type": "string" }
+              }
+            }
+          }
+        },
+        "required": ["name", "probability"]
+      }
+    },
+    
+    "constraints": {
+      "type": "object",
+      "description": "Logical constraints and impossibilities",
+      "properties": {
+        "mutuallyExclusiveGroups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "eventIds": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Only one of these can occur"
+              },
+              "reasoning": { "type": "string" }
+            }
+          }
+        },
+        "hardDependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "if": { "type": "string", "description": "Event A" },
+              "then": { "type": "string", "description": "Event B must happen" },
+              "reasoning": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+  
+  "examples": [
+    {
+      "metadata": {
+        "version": "1.0",
+        "lastUpdated": "2025-05-20",
+        "maintainer": "timeline-team",
+        "description": "Technology dependency graph for 2025–2150 timeline"
+      },
+      
+      "nodes": {
+        "ai-agi": {
+          "title": "Artificial General Intelligence",
+          "category": "artificial-intelligence",
+          "description": "AI system with human-level reasoning across domains",
+          "baselineP50Year": 2065,
+          "maturityLevel": "emerging"
+        },
+        "fusion-commercialization": {
+          "title": "Fusion Energy Commercialization",
+          "category": "energy",
+          "description": "First commercial fusion reactor",
+          "baselineP50Year": 2050,
+          "maturityLevel": "emerging"
+        },
+        "nanotech-manufacturing": {
+          "title": "Atomically Precise Manufacturing",
+          "category": "nanotechnology",
+          "description": "Nanometer-scale precision manufacturing",
+          "baselineP50Year": 2045,
+          "maturityLevel": "nascent"
+        },
+        "quantum-practical": {
+          "title": "Practical Quantum Computing",
+          "category": "quantum",
+          "description": "Quantum computer solves real-world problems",
+          "baselineP50Year": 2040,
+          "maturityLevel": "emerging"
+        },
+        "room-temp-superconductor": {
+          "title": "Room-Temperature Superconductor",
+          "category": "materials",
+          "description": "Superconductivity at room temperature and pressure",
+          "baselineP50Year": 2035,
+          "maturityLevel": "nascent"
+        },
+        "synthetic-biology": {
+          "title": "Advanced Synthetic Biology",
+          "category": "biology",
+          "description": "Design custom organisms at will",
+          "baselineP50Year": 2040,
+          "maturityLevel": "growing"
+        },
+        "planetary-engineering": {
+          "title": "Large-Scale Planetary Engineering",
+          "category": "infrastructure",
+          "description": "Coordinate globe-scale environmental interventions",
+          "baselineP50Year": 2055,
+          "maturityLevel": "nascent"
+        },
+        "stellar-engineering": {
+          "title": "Stellar-Scale Megastructures",
+          "category": "other",
+          "description": "Build structures capturing entire star's energy (Dyson sphere concept)",
+          "baselineP50Year": 2100,
+          "maturityLevel": "nascent"
+        }
+      },
+      
+      "edges": [
+        {
+          "source": "ai-agi",
+          "target": "nanotech-manufacturing",
+          "type": "accelerating",
+          "strength": 0.75,
+          "lagTime": 5,
+          "cascadeMultiplier": 1.5,
+          "description": "AGI enables design of molecular machines; accelerates manufacturing maturity"
+        },
+        {
+          "source": "ai-agi",
+          "target": "synthetic-biology",
+          "type": "accelerating",
+          "strength": 0.8,
+          "lagTime": 3,
+          "cascadeMultiplier": 1.8,
+          "description": "AGI can design complex organisms from first principles; biotech leaps forward"
+        },
+        {
+          "source": "room-temp-superconductor",
+          "target": "fusion-commercialization",
+          "type": "accelerating",
+          "strength": 0.85,
+          "lagTime": 2,
+          "cascadeMultiplier": 1.6,
+          "description": "Superconducting magnets critical for fusion; enables practical reactors"
+        },
+        {
+          "source": "quantum-practical",
+          "target": "ai-agi",
+          "type": "accelerating",
+          "strength": 0.6,
+          "lagTime": 4,
+          "cascadeMultiplier": 1.2,
+          "description": "Quantum computers enable certain AI algorithms; modest acceleration"
+        },
+        {
+          "source": "fusion-commercialization",
+          "target": "planetary-engineering",
+          "type": "enabling",
+          "strength": 0.7,
+          "lagTime": 5,
+          "cascadeMultiplier": 1.4,
+          "description": "Abundant energy enables large-scale environmental intervention systems"
+        },
+        {
+          "source": "nanotech-manufacturing",
+          "target": "quantum-practical",
+          "type": "accelerating",
+          "strength": 0.5,
+          "lagTime": 3,
+          "cascadeMultiplier": 1.1,
+          "description": "Precise manufacturing enables better quantum systems; modest help"
+        },
+        {
+          "source": "ai-agi",
+          "target": "stellar-engineering",
+          "type": "enabling",
+          "strength": 0.9,
+          "lagTime": 15,
+          "cascadeMultiplier": 2.0,
+          "description": "Only superintelligence can coordinate stellar-scale projects"
+        },
+        {
+          "source": "fusion-commercialization",
+          "target": "ai-agi",
+          "type": "accelerating",
+          "strength": 0.4,
+          "lagTime": 5,
+          "cascadeMultiplier": 1.1,
+          "description": "Cheap energy enables AI compute scaling; helps but not critical"
+        },
+        {
+          "source": "synthetic-biology",
+          "target": "nanotech-manufacturing",
+          "type": "amplifying",
+          "strength": 0.6,
+          "lagTime": 4,
+          "cascadeMultiplier": 1.3,
+          "feedbackLoop": true,
+          "description": "Bio + nanotech reinforce each other; both improve faster together"
+        }
+      ],
+      
+      "scenarios": {
+        "acceleration": {
+          "name": "Accelerated Progress",
+          "probability": 0.25,
+          "description": "Multiple breakthroughs cluster; positive feedback loops amplify progress",
+          "parameterOverrides": {
+            "ai-agi": -8,
+            "fusion-commercialization": -5,
+            "nanotech-manufacturing": -6,
+            "quantum-practical": -4
+          },
+          "cascadeEffects": [
+            {
+              "affectedEventId": "planetary-engineering",
+              "deltaYears": -7,
+              "explanation": "Earlier AI + fusion = earlier planetary capability"
+            }
+          ]
+        },
+        "disruption": {
+          "name": "Major Disruption",
+          "probability": 0.15,
+          "description": "Accident or regulatory ban halts a critical field",
+          "triggeringEvent": "synthetic-biology-accident",
+          "parameterOverrides": {
+            "synthetic-biology": 30,
+            "ai-agi": 10,
+            "nanotech-manufacturing": 15
+          },
+          "cascadeEffects": [
+            {
+              "affectedEventId": "ai-agi",
+              "deltaYears": 10,
+              "explanation": "If biotech banned, AI research redirected (but slower)"
+            }
+          ]
+        },
+        "stagnation": {
+          "name": "Business as Usual",
+          "probability": 0.50,
+          "description": "Current pace of progress continues; no major acceleration or disruption",
+          "parameterOverrides": {}
+        },
+        "wild-card": {
+          "name": "Unknown Unknown",
+          "probability": 0.10,
+          "description": "Paradigm shift or discovery (new physics, exotic material) changes everything",
+          "parameterOverrides": {
+            "ai-agi": -15,
+            "fusion-commercialization": -20,
+            "quantum-practical": -10
+          }
+        }
+      },
+      
+      "constraints": {
+        "mutuallyExclusiveGroups": [
+          {
+            "name": "Computing Architecture",
+            "eventIds": [
+              "quantum-practical",
+              "classical-computing-singularity"
+            ],
+            "reasoning": "Only one computing paradigm will dominate; they're largely incompatible"
+          },
+          {
+            "name": "Energy Sources",
+            "eventIds": [
+              "fusion-commercialization",
+              "renewable-abundance",
+              "fission-renaissance"
+            ],
+            "reasoning": "Civilization will transition to one primary energy source"
+          }
+        ],
+        "hardDependencies": [
+          {
+            "if": "stellar-engineering",
+            "then": "ai-agi",
+            "reasoning": "Only superintelligence can coordinate stellar-scale projects"
+          },
+          {
+            "if": "planetary-engineering-large-scale",
+            "then": "fusion-commercialization",
+            "reasoning": "Planetary intervention at scale requires abundant energy"
+          }
+        ]
+      }
+    }
+  ]
+}

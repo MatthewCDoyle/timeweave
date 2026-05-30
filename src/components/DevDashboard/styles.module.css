@@ -1,0 +1,1439 @@
+/*
+ * DevDashboard – styles.module.css
+ * ============================================================================
+ * Zebra Aurora color palette, pure CSS charts, zero external dependencies.
+ *
+ * Light mode:  primary #003fbd  |  accent #bdf75f
+ * Dark mode:   primary #bdf75f  |  surface #161b22
+ */
+
+/* ---------------------------------------------------------------------------
+ * CSS custom property aliases (override-able by theme)
+ * --------------------------------------------------------------------------- */
+:root {
+  --dd-primary:   #003fbd;
+  --dd-accent:    #bdf75f;
+  --dd-surface:   var(--ifm-background-surface-color, #fff);
+  --dd-border:    var(--ifm-color-emphasis-200, #e2e8f0);
+  --dd-text:      var(--ifm-font-color-base, #1a202c);
+  --dd-muted:     var(--ifm-color-emphasis-600, #718096);
+  --dd-radius:    12px;
+}
+
+[data-theme='dark'] {
+  --dd-primary:   #bdf75f;
+  --dd-accent:    #003fbd;
+  --dd-surface:   #161b22;
+  --dd-border:    #30363d;
+  --dd-border-strong: #484f58;
+  --dd-text:      #c9d1d9;
+  /* Bumped from #8b949e → #aab1bd: was ~4.0:1 on #161b22 (fails AA for body),
+     now ~6.0:1 (passes AA for normal text and large text). */
+  --dd-muted:     #aab1bd;
+}
+
+/* ---------------------------------------------------------------------------
+ * Design tokens — spacing scale and type scale
+ * ----------------------------------------------------------------------------
+ * Use these instead of one-off values. Existing code can migrate gradually.
+ *
+ * Spacing — 4px-base scale (modular):
+ *   --space-1: 0.25rem (4px)   tight inline
+ *   --space-2: 0.5rem  (8px)   default chip
+ *   --space-3: 0.75rem (12px)  default block
+ *   --space-4: 1rem    (16px)  section padding
+ *   --space-5: 1.25rem (20px)  panel padding
+ *   --space-6: 1.5rem  (24px)  card padding-large
+ *   --space-8: 2rem    (32px)  section gap
+ *
+ * Type — minimum 0.78rem (~12.5px) for any displayed text per WCAG SC 1.4.4.
+ * No rendering of text below --fs-xs.
+ *   --fs-xs:    0.78rem (12.5px)  smallest acceptable label text
+ *   --fs-sm:    0.85rem (13.6px)  small chip / metadata
+ *   --fs-md:    0.95rem (15.2px)  body / default
+ *   --fs-lg:    1.05rem (16.8px)  panel title
+ *   --fs-xl:    1.25rem (20px)    section headline
+ *   --fs-display: 1.9rem (30.4px) hero number
+ *
+ * Font weights:
+ *   --fw-normal: 400
+ *   --fw-medium: 500
+ *   --fw-bold:   700
+ * --------------------------------------------------------------------------- */
+:root {
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  --fs-xs:      0.78rem;
+  --fs-sm:      0.85rem;
+  --fs-md:      0.95rem;
+  --fs-lg:      1.05rem;
+  --fs-xl:      1.25rem;
+  --fs-display: 1.9rem;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold:   700;
+
+  /* Touch-target minimum per WCAG 2.5.5 (AAA) and 2.5.8 (AA) */
+  --tap-target-min: 44px;
+
+  /* Standard focus ring for accessibility — applied via :focus-visible */
+  --focus-ring: 0 0 0 2px var(--dd-surface, #fff), 0 0 0 4px var(--dd-primary, #003fbd);
+}
+
+/* ---------------------------------------------------------------------------
+ * Global accessibility defaults (scoped to the dashboard container)
+ * --------------------------------------------------------------------------- */
+.dashboard :focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 4px;
+}
+.dashboard button,
+.dashboard a {
+  /* Make sure interactive elements never render below the smallest readable size */
+  font-size: max(var(--fs-xs), 1em);
+}
+@media (prefers-reduced-motion: reduce) {
+  .dashboard *,
+  .dashboard *::before,
+  .dashboard *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Section dividers — group panels into labelled rows
+ * --------------------------------------------------------------------------- */
+.sectionDivider {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0.25rem;
+  padding: 0;
+}
+.sectionDivider:first-of-type {
+  margin-top: 0;
+}
+.sectionLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dd-primary);
+  white-space: nowrap;
+}
+.sectionLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--dd-border-strong, #cbd5e1), transparent);
+  border-radius: 1px;
+}
+
+/* ---------------------------------------------------------------------------
+ * Outer dashboard wrapper
+ * --------------------------------------------------------------------------- */
+.dashboard {
+  padding: 2rem 1.5rem 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: var(--ifm-font-family-base);
+}
+
+/* ---------------------------------------------------------------------------
+ * Dev-only notice banner
+ * --------------------------------------------------------------------------- */
+.devNotice {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+  border: 1px solid #ffc107;
+  color: #856404;
+  font-size: 0.8rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .devNotice {
+  background: linear-gradient(135deg, #2a1f00 0%, #1e1600 100%);
+  border-color: #5a4500;
+  color: #ffc107;
+}
+
+/* ---------------------------------------------------------------------------
+ * Panel grid
+ * --------------------------------------------------------------------------- */
+.panelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.panelWide {
+  grid-column: span 2;
+}
+
+/* Panels that should span the FULL row regardless of grid width. Used by
+   panels whose content (large tables, multi-section pod views) doesn't fit
+   well into a 2-column slot when the viewport is wide enough for 3+ columns
+   of 340px. */
+.panelFull {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 820px) {
+  .panelWide { grid-column: span 1; }
+  .panelFull { grid-column: 1 / -1; }
+  .panelGrid  { grid-template-columns: 1fr; }
+}
+
+/* ---------------------------------------------------------------------------
+ * Agentic pod section — visually separates the 5 pod panels from data panels.
+ * Pods get a left-edge accent stripe in their owning agent's color, plus a
+ * "POD" badge in the panel head so they read as a distinct category.
+ * --------------------------------------------------------------------------- */
+.podSectionDivider {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2.5rem 0 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed var(--dd-border-strong, #cbd5e1);
+}
+.podSectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dd-text, #0f172a);
+  white-space: nowrap;
+}
+.podSectionSubtitle {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--dd-muted, #64748b);
+  letter-spacing: 0;
+  text-transform: none;
+  margin-left: 0.4rem;
+}
+.podSectionLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--dd-border-strong, #cbd5e1), transparent);
+  border-radius: 1px;
+}
+
+/* Per-pod accent — adds a left-edge stripe matching the pod's brand colour.
+   Applied on the .panel root so it composes with .panelFull / .panel cleanly.
+   Also gives pods a subtle elevated surface so the "Agentic Pods" region
+   reads as visually distinct from regular data panels (E from the
+   differentiation menu). */
+.podAccent {
+  border-left-width: 6px;
+  border-left-style: solid;
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.025) 0%, transparent 60px),
+    var(--dd-surface);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+    0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .podAccent {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 60px),
+    var(--dd-surface);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.podAccent:hover {
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.06) inset,
+    0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .podAccent:hover {
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+    0 6px 18px rgba(0, 0, 0, 0.4);
+}
+.podAccentLibrarian    { border-left-color: #2196f3; }
+.podAccentEditor       { border-left-color: #2ecc71; }
+.podAccentOrchestrator { border-left-color: #9b59b6; }
+.podAccentStrategist   { border-left-color: #e67e22; }
+.podAccentGatekeeper   { border-left-color: #e74c3c; }
+
+/* "POD" badge that sits in the panel head — uses the pod's accent colour.
+   Compact, all-caps, sits to the right of the icon. */
+.podBadge {
+  display: inline-flex;
+  align-items: center;
+  height: 1.4rem;
+  padding: 0 0.5rem;
+  margin-right: 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 4px;
+  background: var(--dd-muted, #64748b);
+}
+.podBadgeLibrarian    { background: #2196f3; }
+.podBadgeEditor       { background: #2ecc71; }
+.podBadgeOrchestrator { background: #9b59b6; }
+.podBadgeStrategist   { background: #e67e22; }
+.podBadgeGatekeeper   { background: #e74c3c; }
+
+/* ---------------------------------------------------------------------------
+ * Panel card
+ * --------------------------------------------------------------------------- */
+.panel {
+  background: var(--dd-surface);
+  border: 2px solid var(--dd-border-strong, #cbd5e1);
+  border-radius: var(--dd-radius);
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel:hover {
+  box-shadow: 0 8px 32px rgba(0, 63, 189, 0.10);
+  transform: translateY(-1px);
+}
+
+[data-theme='dark'] .panel:hover {
+  box-shadow: 0 8px 32px rgba(189, 247, 95, 0.08);
+}
+
+/* ---------------------------------------------------------------------------
+ * Hero panel (Build Overview)
+ * --------------------------------------------------------------------------- */
+.panelHero {
+  margin-bottom: 0;
+  border: 1px solid var(--dd-border);
+  border-radius: var(--dd-radius);
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+
+.panelHero:hover {
+  transform: none;
+  box-shadow: 0 8px 40px rgba(0, 63, 189, 0.12);
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(0, 63, 189, 0.06) 0%,
+    rgba(189, 247, 95, 0.06) 50%,
+    rgba(0, 63, 189, 0.03) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme='dark'] .heroGradient {
+  background: linear-gradient(135deg,
+    rgba(189, 247, 95, 0.06) 0%,
+    rgba(0, 63, 189, 0.06) 50%,
+    rgba(189, 247, 95, 0.03) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+  /* Symmetric padding using design tokens — fixes the asymmetric 1.6/1.8 rem */
+  padding: var(--space-6) var(--space-6);
+  flex-wrap: wrap;
+}
+
+.heroLeft  { flex: 1 1 340px; display: flex; flex-direction: column; gap: var(--space-3); }
+.heroRight { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+
+/* Override the default panelSubtitle margin inside the hero so the
+   "Generated …" stamp sits a clean 12px below the title, not a browser default. */
+.heroLeft .panelSubtitle {
+  margin: 0;
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  /* Was margin-top: 0.75rem — now uses parent flex-gap so we don't double-space */
+  margin-top: 0;
+}
+
+/* Narrow viewports: tighten hero stat-card padding so 4 cards still fit
+   without squeezing the StatCard min-width below readability. */
+@media (max-width: 480px) {
+  .heroStats {
+    gap: var(--space-2);
+  }
+  .statCard {
+    padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+    min-width: 0;
+    flex: 1 1 calc(50% - var(--space-2));
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Panel head
+ * --------------------------------------------------------------------------- */
+.panelHead {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.panelIcon  { font-size: 1.25rem; line-height: 1; }
+
+.panelTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.panelSubtitle {
+  font-size: var(--fs-xs);  /* was 0.73rem */
+  color: var(--dd-muted);
+  margin: -0.5rem 0 0;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------------------------
+ * Stat cards (hero row)
+ * --------------------------------------------------------------------------- */
+.statCard {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--dd-border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  transition: border-color 0.2s;
+}
+
+.statCard:hover { border-color: var(--dd-primary); }
+
+.statCardAccent {
+  background: linear-gradient(135deg, rgba(0,63,189,0.08), rgba(0,63,189,0.02));
+  border-color: rgba(0,63,189,0.25);
+}
+
+[data-theme='dark'] .statCardAccent {
+  background: linear-gradient(135deg, rgba(189,247,95,0.08), rgba(189,247,95,0.02));
+  border-color: rgba(189,247,95,0.25);
+}
+
+.statCardIcon  { font-size: 1rem; }
+.statCardValue { font-size: 1.65rem; font-weight: 800; line-height: 1; color: var(--dd-primary); }
+.statCardLabel { font-size: var(--fs-xs);  /* was 0.67rem */ text-transform: uppercase; letter-spacing: 0.07em; color: var(--dd-muted); }
+
+/* Simple inline stat (used inside panels) */
+.statRow  { display: flex; flex-wrap: wrap; gap: 1rem; }
+.stat     { flex: 1 1 70px; min-width: 70px; }
+.statValue { font-size: 1.9rem; font-weight: 800; line-height: 1; color: var(--dd-primary); }
+.statLabel { font-size: var(--fs-xs);  /* was 0.67rem */ text-transform: uppercase; letter-spacing: 0.06em; color: var(--dd-muted); margin-top: 0.2rem; }
+
+/* ---------------------------------------------------------------------------
+ * Health Gauge (semicircle)
+ * --------------------------------------------------------------------------- */
+.gaugeWrap { display: flex; flex-direction: column; align-items: center; }
+
+.gauge {
+  width: 130px;
+  height: 65px; /* half-circle */
+  border-radius: 130px 130px 0 0;
+  overflow: hidden;
+  position: relative;
+  /* background set inline */
+}
+
+.gaugeHole {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 45px;
+  background: var(--dd-surface);
+  border-radius: 90px 90px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 4px;
+}
+
+.gaugeValue {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.gaugeLabel {
+  font-size: var(--fs-xs);  /* was 0.6rem */
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dd-muted);
+}
+
+.gaugeCaption {
+  font-size: var(--fs-xs);  /* was 0.68rem */
+  color: var(--dd-muted);
+  text-align: center;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * Progress bars
+ * --------------------------------------------------------------------------- */
+.progressList  { display: flex; flex-direction: column; gap: 0.6rem; }
+.progressItem  { display: flex; flex-direction: column; gap: 0.15rem; }
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-xs);  /* was 0.73rem */
+  color: var(--dd-text);
+}
+
+.progressTrack {
+  height: 8px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--dd-primary);
+  transition: width 0.5s ease;
+}
+
+.progressFillWarn   { height: 100%; border-radius: 999px; background: #e67e22; transition: width 0.5s ease; }
+.progressFillDanger { height: 100%; border-radius: 999px; background: #e74c3c; transition: width 0.5s ease; }
+
+.okText   { color: #2ecc71; font-weight: 600; }
+.warnText { color: #e67e22; font-weight: 600; }
+
+/* ---------------------------------------------------------------------------
+ * Vertical bar chart (pure CSS)
+ * --------------------------------------------------------------------------- */
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 130px;
+  padding-bottom: 1.6rem;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.barChartGridline {
+  position: absolute;
+  left: 0; right: 0;
+  border-top: 1px dashed var(--ifm-color-emphasis-200);
+  z-index: 0;
+}
+
+.barWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  /* min-width bumped 30 → 44 to match --tap-target-min so each bar is a
+     viable hover/tap target on touch devices. Bars carry title= tooltips,
+     so this is the effective hit region for details-on-demand. */
+  flex: 1 1 44px;
+  min-width: 44px;
+  max-width: 70px;
+  position: relative;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  min-height: 4px;
+  position: relative;
+  transition: height 0.4s ease, opacity 0.2s;
+  z-index: 1;
+}
+
+.bar:hover { opacity: 0.85; }
+
+.barLabel {
+  font-size: var(--fs-xs);  /* was 0.57rem — below WCAG-friendly minimum */
+  text-align: center;
+  color: var(--dd-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  position: absolute;
+  bottom: -1.55rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.barCount {
+  font-size: var(--fs-xs);  /* was 0.62rem */
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------------------
+ * Horizontal bars
+ * --------------------------------------------------------------------------- */
+.hBarList { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.hBarItem { display: flex; flex-direction: column; gap: 0.15rem; }
+
+.hBarMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-xs);  /* was 0.73rem */
+  color: var(--dd-text);
+}
+
+.hBarLabel { font-weight: 500; }
+.hBarValue { font-weight: 700; color: var(--ifm-heading-color); }
+.hBarPct   { font-weight: 400; color: var(--dd-muted); }
+
+.hBarTrack {
+  height: 10px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.hBarFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+  min-width: 2px;
+}
+
+.hBarSubtitle { font-size: var(--fs-xs);  /* was 0.63rem */ color: var(--dd-muted); }
+
+/* ---------------------------------------------------------------------------
+ * Donut ring (CSS conic-gradient)
+ * --------------------------------------------------------------------------- */
+.donutWrap {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.donutContainer {
+  flex-shrink: 0;
+  width: 110px;
+  height: 110px;
+  position: relative;
+}
+
+.donut {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+.donutHole {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, var(--dd-surface) 54%, transparent 54%);
+  border-radius: 50%;
+}
+
+.donutCenter {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--ifm-heading-color);
+  line-height: 1;
+}
+
+.donutLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.38rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.donutLegendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--fs-xs);  /* was 0.72rem */
+  color: var(--dd-text);
+  overflow: hidden;
+}
+
+.donutLegendSwatch {
+  /* Bumped 10px → 12px so the swatch stays visible at narrow widths. */
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  min-height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.donutLegendLabel {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.donutLegendPct  { color: var(--dd-muted); font-size: var(--fs-xs);  /* was 0.67rem */ }
+.donutLegendCount { font-weight: 700; color: var(--ifm-heading-color); }
+
+/* ---------------------------------------------------------------------------
+ * Schema Analytics
+ * --------------------------------------------------------------------------- */
+.schemaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.schemaSection { display: flex; flex-direction: column; gap: 0.6rem; }
+.schemaSectionWide { grid-column: span 2; }
+
+@media (max-width: 640px) {
+  .schemaSectionWide { grid-column: span 1; }
+  .schemaGrid { grid-template-columns: 1fr; }
+}
+
+.schemaSectionTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---------------------------------------------------------------------------
+ * Freshness buckets (date analytics)
+ * --------------------------------------------------------------------------- */
+.freshnessRow {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.freshnessBucket {
+  flex: 1 1 80px;
+  border-top: 4px solid;
+  padding: 0.7rem 0.9rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: transform 0.15s;
+}
+
+.freshnessBucket:hover { transform: translateY(-2px); }
+
+.freshnessBucketValue {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.freshnessBucketLabel {
+  font-size: var(--fs-xs);  /* was 0.72rem */
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+}
+
+.freshnessBucketSub {
+  font-size: var(--fs-xs);  /* was 0.63rem */
+  color: var(--dd-muted);
+}
+
+/* ---------------------------------------------------------------------------
+ * Field coverage heatmap grid
+ * --------------------------------------------------------------------------- */
+.coverageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.5rem;
+}
+
+.coverageCell {
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  cursor: default;
+  transition: transform 0.15s;
+}
+
+.coverageCell:hover { transform: scale(1.04); }
+
+.coverageCell_high { background: rgba(46, 204, 113, 0.18); border: 1px solid rgba(46, 204, 113, 0.4); }
+.coverageCell_mid  { background: rgba(243, 156, 18, 0.15); border: 1px solid rgba(243, 156, 18, 0.35); }
+.coverageCell_low  { background: rgba(231, 76, 60, 0.12);  border: 1px solid rgba(231, 76, 60, 0.3); }
+
+[data-theme='dark'] .coverageCell_high { background: rgba(46, 204, 113, 0.12); }
+[data-theme='dark'] .coverageCell_mid  { background: rgba(243, 156, 18, 0.10); }
+[data-theme='dark'] .coverageCell_low  { background: rgba(231, 76, 60, 0.10); }
+
+.coverageCellField {
+  font-size: var(--fs-xs);  /* was 0.65rem */
+  text-transform: capitalize;
+  color: var(--dd-text);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.coverageCellPct {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--ifm-heading-color);
+}
+
+/* ---------------------------------------------------------------------------
+ * Status badges
+ * --------------------------------------------------------------------------- */
+.statusRow { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--fs-xs);  /* was 0.7rem */
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.statusOk    { background: rgba(46,204,113,0.12);  color: #1a7a1a; border-color: rgba(46,204,113,0.4); }
+.statusWarn  { background: rgba(243,156,18,0.12);  color: #9a6700; border-color: rgba(243,156,18,0.4); }
+.statusError { background: rgba(231,76,60,0.10);   color: #b71c1c; border-color: rgba(231,76,60,0.3); }
+.statusMuted { background: rgba(128,128,128,0.08); color: #888;    border-color: rgba(128,128,128,0.2); }
+
+[data-theme='dark'] .statusOk    { color: #9ef09e; background: rgba(46,204,113,0.10);  border-color: rgba(46,204,113,0.25); }
+[data-theme='dark'] .statusWarn  { color: #ffd357; background: rgba(243,156,18,0.10);  border-color: rgba(243,156,18,0.25); }
+[data-theme='dark'] .statusError { color: #ff9a9a; background: rgba(231,76,60,0.10);   border-color: rgba(231,76,60,0.25); }
+[data-theme='dark'] .statusMuted { color: #aaa;    background: rgba(128,128,128,0.08); border-color: rgba(128,128,128,0.15); }
+
+/* ---------------------------------------------------------------------------
+ * Doc table (compact)
+ * --------------------------------------------------------------------------- */
+.docTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-xs);  /* was 0.72rem */
+}
+
+.docTable th {
+  text-align: left;
+  font-size: var(--fs-xs);  /* was 0.63rem */
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dd-muted);
+  padding: 0.3rem 0.5rem;
+  border-bottom: 2px solid var(--dd-border);
+}
+
+.docTable td {
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+  color: var(--dd-text);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.docTable tr:last-child td { border-bottom: none; }
+.docTable tr:hover td { background: var(--ifm-color-emphasis-100); }
+
+/* ---------------------------------------------------------------------------
+ * Guessed value chip
+ * --------------------------------------------------------------------------- */
+.guessedChip {
+  display: inline-block;
+  background: rgba(243, 156, 18, 0.12);
+  color: #856404;
+  border: 1px solid rgba(243, 156, 18, 0.4);
+  border-radius: 4px;
+  font-size: var(--fs-xs);  /* was 0.62rem */
+  padding: 0.1rem 0.35rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+[data-theme='dark'] .guessedChip {
+  background: rgba(243, 156, 18, 0.10);
+  color: #ffc107;
+  border-color: rgba(243, 156, 18, 0.25);
+}
+
+/* ---------------------------------------------------------------------------
+ * Empty / loading states
+ * --------------------------------------------------------------------------- */
+.empty {
+  color: var(--dd-muted);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+/* Shimmer loading skeleton */
+.loadingShimmer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem 1.5rem;
+}
+
+.shimmerCard {
+  height: 160px;
+  border-radius: var(--dd-radius);
+  background: linear-gradient(90deg,
+    var(--ifm-color-emphasis-100) 25%,
+    var(--ifm-color-emphasis-200) 50%,
+    var(--ifm-color-emphasis-100) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* ---------------------------------------------------------------------------
+ * Scrollable container
+ * --------------------------------------------------------------------------- */
+.scrollBox {
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 6px;
+  border: 1px solid var(--dd-border);
+}
+
+/* ---------------------------------------------------------------------------
+ * JIRA / UX panels — stat chips, readiness gauge, linkage table
+ * --------------------------------------------------------------------------- */
+
+/* Chip row */
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.chip {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  /* min-height matches --tap-target-min so chips that become clickable in
+     future are already large enough; today's display-only chips also benefit
+     from a consistent height that doesn't squeeze on narrow viewports. */
+  min-height: var(--tap-target-min, 44px);
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--dd-border);
+  gap: 0.1rem;
+  transition: border-color 0.2s;
+}
+
+.chip:hover { border-color: var(--dd-primary); }
+
+.chipValue {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--dd-primary);
+}
+
+.chipLabel {
+  font-size: var(--fs-xs);  /* was 0.62rem */
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dd-muted);
+}
+
+/* Release Readiness gauge bar */
+.readinessGauge {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.readinessTrack {
+  height: 14px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.readinessFill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.readinessTimeMarker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 999px;
+}
+
+[data-theme='dark'] .readinessTimeMarker {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.readinessMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-xs);  /* was 0.71rem */
+  color: var(--dd-text);
+}
+
+.readinessLabel { font-weight: 600; }
+
+.readinessOnTrack  { color: #2ecc71; font-weight: 700; }
+.readinessBehind   { color: #e67e22; font-weight: 700; }
+.readinessCritical { color: #e74c3c; font-weight: 700; }
+
+/* Countdown badge */
+.countdownBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--fs-xs);  /* was 0.72rem */
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(0, 63, 189, 0.08);
+  border: 1px solid rgba(0, 63, 189, 0.25);
+  color: var(--dd-primary);
+}
+
+[data-theme='dark'] .countdownBadge {
+  background: rgba(189, 247, 95, 0.08);
+  border-color: rgba(189, 247, 95, 0.25);
+}
+
+/* Placeholder card */
+.placeholderCard {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--ifm-color-emphasis-100),
+    var(--ifm-color-emphasis-100) 5px,
+    transparent 5px,
+    transparent 12px
+  );
+  border: 1px dashed var(--dd-border);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.placeholderBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--fs-xs);  /* was 0.65rem */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #9a6700;
+  background: rgba(243, 156, 18, 0.12);
+  border: 1px solid rgba(243, 156, 18, 0.35);
+  border-radius: 4px;
+  padding: 0.15rem 0.45rem;
+}
+
+[data-theme='dark'] .placeholderBadge {
+  color: #ffd357;
+  background: rgba(243, 156, 18, 0.10);
+  border-color: rgba(243, 156, 18, 0.25);
+}
+
+.mockBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--fs-xs);  /* was 0.65rem */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #7a5af8;
+  background: rgba(122, 90, 248, 0.10);
+  border: 1px solid rgba(122, 90, 248, 0.3);
+  border-radius: 4px;
+  padding: 0.15rem 0.45rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* JIRA linkage table — extends docTable with wider cells */
+.linkageTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-xs);  /* was 0.72rem */
+}
+
+.linkageTable th {
+  text-align: left;
+  font-size: var(--fs-xs);  /* was 0.63rem */
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dd-muted);
+  padding: 0.3rem 0.5rem;
+  border-bottom: 2px solid var(--dd-border);
+  white-space: nowrap;
+}
+
+.linkageTable td {
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+  color: var(--dd-text);
+  vertical-align: top;
+}
+
+.linkageTable tr:last-child td { border-bottom: none; }
+.linkageTable tr:hover td { background: var(--ifm-color-emphasis-100); }
+
+.linkageKey {
+  font-weight: 700;
+  color: var(--dd-primary);
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 0.78rem;
+}
+
+.linkageKey a { color: inherit; text-decoration: none; }
+.linkageKey a:hover { text-decoration: underline; }
+
+.linkageFiles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: var(--fs-xs);  /* was 0.68rem */
+  color: var(--dd-muted);
+  font-family: monospace;
+}
+
+/* Filter bar above linkage table */
+.filterBar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filterInput {
+  flex: 1 1 160px;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--dd-border);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  background: var(--dd-surface);
+  color: var(--dd-text);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.filterInput:focus { border-color: var(--dd-primary); }
+
+/* Clarity scroll-depth bars */
+.scrollDepthRow {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-end;
+  height: 80px;
+}
+
+.scrollDepthBar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.scrollDepthFill {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  min-height: 4px;
+  transition: height 0.45s ease;
+}
+
+.scrollDepthLabel {
+  font-size: var(--fs-xs);  /* was 0.6rem */
+  color: var(--dd-muted);
+  font-weight: 600;
+  text-align: center;
+}
+
+.scrollDepthPct {
+  font-size: var(--fs-xs);  /* was 0.7rem */
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+  text-align: center;
+}
+
+/* Clarity rage-click table */
+.clarityTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-xs);  /* was 0.72rem */
+}
+
+.clarityTable th {
+  text-align: left;
+  font-size: var(--fs-xs);  /* was 0.63rem */
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dd-muted);
+  padding: 0.3rem 0.5rem;
+  border-bottom: 2px solid var(--dd-border);
+}
+
+.clarityTable td {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+  color: var(--dd-text);
+}
+
+.clarityTable tr:last-child td { border-bottom: none; }
+.clarityTable tr:hover td { background: var(--ifm-color-emphasis-100); }
+
+/* Panels row (side-by-side tiles) */
+.tilesRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 820px) {
+  .tilesRow { grid-template-columns: 1fr; }
+}
+
+/* ---------------------------------------------------------------------------
+ * Librarian Pod
+ * --------------------------------------------------------------------------- */
+.librarianRunBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid var(--dd-primary, #003fbd);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--dd-primary, #003fbd) 0%, #1a5cd8 100%);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.librarianRunBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 63, 189, 0.3);
+}
+.librarianRunBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.libReleaseBannerPass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.4);
+  color: #1a7a1a;
+  font-size: 0.82rem;
+}
+.libReleaseBannerFail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: rgba(231, 76, 60, 0.10);
+  border: 1px solid rgba(231, 76, 60, 0.35);
+  color: #b71c1c;
+  font-size: 0.82rem;
+}
+[data-theme='dark'] .libReleaseBannerPass { color: #9ef09e; }
+[data-theme='dark'] .libReleaseBannerFail { color: #ff9a9a; }
+
+/* ---------------------------------------------------------------------------
+ * Shneiderman's Mantra — details-on-demand primitives
+ * ---------------------------------------------------------------------------
+ * JargonTerm: dotted underline + help cursor; the native `title` attribute
+ * provides the tooltip. Standard CSS pattern for "definition on hover."
+ *
+ * DetailsOnDemand: click-to-expand wrapper that takes any aggregate stat
+ * and lets users drill down to its underlying list. Header is a button so
+ * keyboard + screen-reader navigation works without extra wiring.
+ */
+
+.jargonTerm {
+  border-bottom: 1px dotted currentColor;
+  cursor: help;
+  text-decoration: none;
+}
+
+.detailsOnDemand {
+  margin: 0.5rem 0;
+}
+
+.detailsOnDemandHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: var(--tap-target-min, 44px);
+  padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.detailsOnDemandHeader:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.detailsOnDemandHeader:focus-visible {
+  outline: 2px solid var(--ifm-color-primary, #2196f3);
+  outline-offset: 2px;
+}
+
+.detailsOnDemandDisclosure {
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  color: var(--dd-muted, #8892b0);
+  transition: transform 0.15s ease;
+}
+
+.detailsOnDemandSummary {
+  flex: 1 1 auto;
+  font-size: var(--fs-xs, 0.78rem);
+  color: var(--dd-foreground, inherit);
+}
+
+.detailsOnDemandCount {
+  flex: 0 0 auto;
+  padding: 0.1rem 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  font-size: var(--fs-xs, 0.78rem);
+  font-weight: 600;
+  color: var(--dd-muted, #8892b0);
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.detailsOnDemandBody {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--dd-border);
+  border-radius: 6px;
+  font-size: var(--fs-xs, 0.78rem);
+}
+
+/* BarChart "+N more" indicator — appears when entries.length > maxBars so
+   the user can see that long tails are hidden, with a title= tooltip
+   carrying the count + combined sum (Shneiderman details-on-demand). */
+.barChartHiddenNote {
+  align-self: flex-end;
+  margin-left: var(--space-2, 0.5rem);
+  margin-bottom: 1.6rem;  /* clear the axis-label padding */
+  padding: var(--space-1, 0.25rem) var(--space-2, 0.5rem);
+  font-size: var(--fs-xs, 0.78rem);
+  color: var(--dd-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  cursor: help;
+  flex-shrink: 0;
+}
+
+/* Narrow viewports: collapse donut + legend to a stack so neither has to
+   shrink below readability. Below 480px the legend renders below the donut
+   instead of beside it. Targets the existing .donutWrap container. */
+@media (max-width: 480px) {
+  .donutWrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .donutLegend {
+    margin-top: var(--space-2, 0.5rem);
+  }
+}

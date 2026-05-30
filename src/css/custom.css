@@ -52,3 +52,32 @@
     margin: 1rem 0;
   }
 }
+
+html.docs-doc-page.plugin-id-timeline.docs-doc-id-index .main-wrapper .container {
+  max-width: min(99vw, 2600px) !important;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+html.docs-doc-page.plugin-id-timeline.docs-doc-id-index .theme-doc-markdown {
+  max-width: none;
+}
+
+html.docs-doc-page.plugin-id-timeline.docs-doc-id-index .row {
+  --ifm-spacing-horizontal: 0.6rem;
+}
+
+@media (min-width: 997px) {
+  html.docs-doc-page.plugin-id-timeline.docs-doc-id-index [class*='docMainContainer_'] {
+    max-width: 100% !important;
+  }
+
+  html.docs-doc-page.plugin-id-timeline.docs-doc-id-index [class*='docItemCol_'] {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+  }
+
+  html.docs-doc-page.plugin-id-timeline.docs-doc-id-index [class*='docItemContainer_'] {
+    max-width: none;
+  }
+}

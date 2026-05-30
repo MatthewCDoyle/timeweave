@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["pod", "runId", "snapshotDate"],
+  "properties": {
+    "pod": { "const": "LIBRARIAN" },
+    "runId": { "type": "string", "minLength": 1 },
+    "snapshotDate": { "type": "string", "minLength": 1 },
+    "remediations": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/remediation" }
+    }
+  },
+  "additionalProperties": true
+}

@@ -21,7 +21,7 @@ export default function Home() {
           timeline and an interactive dependency map.
         </p>
         <div className={styles.actions}>
-          <Link className={styles.primaryAction} to="/timeline">
+          <Link className={styles.primaryAction} to="/timeline-view">
             Open Timeline
           </Link>
         </div>

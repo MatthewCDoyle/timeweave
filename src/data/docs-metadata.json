@@ -1,79 +1,2925 @@
 {
-  "ai-workplace-integration": {
-    "title": "AI in the Workplace: Integration, Skills, and Career Impact",
-    "description": "Master AI integration in your workplace. Learn which AI tools to use daily, how to upskill, and position yourself as AI-savvy in your career.",
-    "primaryTopic": "Future of Work",
-    "tags": ["ai", "automation"],
-    "date": "2024-12-26",
-    "timeline": {
-      "year": 2024,
-      "quarter": "Q4",
-      "significance": "trend",
-      "category": "technology"
-    }
-  },
   "ath-future-tech-ai-overview": {
     "title": "Artificial Intelligence: Overview and Types",
-    "description": "Overview of AI foundations and major AI system types.",
     "primaryTopic": "AI",
-    "tags": ["ai", "machine-learning"],
-    "date": "2025-12-26",
+    "tags": [
+      "ai",
+      "artificial-intelligence",
+      "agi",
+      "machine-learning",
+      "neural-networks",
+      "deep-learning",
+      "Artificial Intelligence"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "automation",
+      "intelligence-systems"
+    ],
+    "pillars": [
+      "ai"
+    ],
+    "date": "2025-12-26T00:00:00.000Z",
     "timeline": {
+      "startYear": 2024,
+      "endYear": 2024,
       "year": 2024,
       "quarter": "Q4",
+      "precision": "year",
+      "era": "near-future",
       "significance": "foundation",
       "category": "technology"
-    }
+    },
+    "links": [
+      {
+        "type": "enables",
+        "targetId": "ath-future-tech-metaverse-overview",
+        "strength": 0.9,
+        "rationale": "AI agents and generation systems power adaptive worlds and avatars."
+      },
+      {
+        "type": "enables",
+        "targetId": "ath-future-tech-nanotech-overview",
+        "strength": 0.6,
+        "rationale": "AI improves nanoscale design and process optimization."
+      }
+    ]
   },
   "ath-future-tech-holography": {
     "title": "Holography and Volumetric Display Technology",
-    "description": "Explore holography technology, volumetric visualization, and 3D projection systems.",
     "primaryTopic": "realities",
-    "tags": ["holography", "volumetric-display"],
-    "date": "2025-12-26",
+    "tags": [
+      "holography",
+      "volumetric-display",
+      "3d-projection",
+      "voxels",
+      "visualization"
+    ],
+    "categories": [
+      "technology",
+      "realities",
+      "holography",
+      "interfaces"
+    ],
+    "pillars": [
+      "xr-vr-ar-holography"
+    ],
+    "date": "2025-12-26T00:00:00.000Z",
     "timeline": {
+      "startYear": 2024,
+      "endYear": 2024,
       "year": 2024,
       "quarter": "Q4",
+      "precision": "year",
+      "era": "near-future",
       "significance": "trend",
       "category": "technology"
-    }
+    },
+    "links": [
+      {
+        "type": "converges-with",
+        "targetId": "ath-future-tech-vr-overview",
+        "strength": 0.85,
+        "rationale": "Immersive interfaces and volumetric display stacks overlap."
+      },
+      {
+        "type": "enables",
+        "targetId": "ath-future-tech-metaverse-overview",
+        "strength": 0.7,
+        "rationale": "Holographic projection extends social and enterprise metaverse experiences."
+      }
+    ]
   },
   "ath-future-tech-metaverse-overview": {
     "title": "The Metaverse: Synthesis of Reality Implementations",
-    "description": "Explore how the Metaverse synthesizes MR, AR, VR, and XR technologies.",
     "primaryTopic": "realities",
-    "tags": ["metaverse", "spatial-computing"],
-    "date": "2025-12-26",
+    "tags": [
+      "metaverse",
+      "virtual-worlds",
+      "web3",
+      "spatial-computing",
+      "persistent-worlds"
+    ],
+    "categories": [
+      "technology",
+      "realities",
+      "metaverse",
+      "platforms"
+    ],
+    "pillars": [
+      "xr-vr-ar-holography"
+    ],
+    "date": "2025-12-26T00:00:00.000Z",
     "timeline": {
+      "startYear": 2024,
+      "endYear": 2034,
       "year": 2024,
       "quarter": "Q4",
+      "precision": "range",
+      "era": "near-future",
       "significance": "trend",
       "category": "technology"
-    }
+    },
+    "links": [
+      {
+        "type": "depends-on",
+        "targetId": "ath-future-tech-vr-overview",
+        "strength": 0.9,
+        "rationale": "VR/XR hardware and UX are core delivery surfaces for metaverse use cases."
+      },
+      {
+        "type": "depends-on",
+        "targetId": "ath-future-tech-ai-overview",
+        "strength": 0.8,
+        "rationale": "AI drives world simulation, generation, moderation, and agent behavior."
+      },
+      {
+        "type": "converges-with",
+        "targetId": "ath-future-tech-holography",
+        "strength": 0.7,
+        "rationale": "Spatial telepresence and volumetric media increase social presence."
+      }
+    ]
   },
   "ath-future-tech-nanotech-overview": {
     "title": "Nanotechnology: Miniaturization and Molecular Manufacturing",
-    "description": "Explore nanotechnology's role in miniaturization, molecular manufacturing, and autonomous nanosystems.",
     "primaryTopic": "nanotech",
-    "tags": ["nanotechnology", "molecular-manufacturing"],
-    "date": "2025-12-26",
+    "tags": [
+      "nanotechnology",
+      "miniaturization",
+      "molecular-manufacturing",
+      "nanofabrication",
+      "nanobots"
+    ],
+    "categories": [
+      "technology",
+      "nanotech",
+      "manufacturing",
+      "biotech-interface"
+    ],
+    "pillars": [
+      "nanotech",
+      "printing-nanofabrication"
+    ],
+    "date": "2025-12-26T00:00:00.000Z",
     "timeline": {
+      "startYear": 2034,
+      "endYear": 2042,
       "year": 2034,
       "quarter": "Q2",
+      "precision": "range",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    },
+    "links": [
+      {
+        "type": "accelerated-by",
+        "targetId": "ath-future-tech-ai-overview",
+        "strength": 0.75,
+        "rationale": "AI shortens materials discovery and control-loop optimization cycles."
+      },
+      {
+        "type": "influences",
+        "targetId": "ath-future-tech-metaverse-overview",
+        "strength": 0.45,
+        "rationale": "Advanced nanomaterials can improve wearable and spatial interfaces."
+      }
+    ]
+  },
+  "ath-future-tech-vr-overview": {
+    "title": "Virtual Reality and Immersive Technology Overview",
+    "primaryTopic": "realities",
+    "tags": [
+      "vr",
+      "virtual-reality",
+      "immersive-tech",
+      "xr",
+      "spatial-computing",
+      "metaverse"
+    ],
+    "categories": [
+      "technology",
+      "realities",
+      "vr",
+      "interfaces"
+    ],
+    "pillars": [
+      "xr-vr-ar-holography",
+      "immersive-tech"
+    ],
+    "date": "2025-12-26T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2024,
+      "endYear": 2028,
+      "year": 2024,
+      "quarter": "Q3",
+      "precision": "range",
+      "era": "near-future",
+      "significance": "trend",
+      "category": "technology"
+    },
+    "links": [
+      {
+        "type": "enables",
+        "targetId": "ath-future-tech-metaverse-overview",
+        "strength": 0.9,
+        "rationale": "VR/XR presence is a primary metaverse interaction modality."
+      },
+      {
+        "type": "converges-with",
+        "targetId": "ath-future-tech-holography",
+        "strength": 0.8,
+        "rationale": "Both trajectories focus on spatial immersion and embodied interaction."
+      }
+    ]
+  },
+  "index": {
+    "title": "Timeline"
+  },
+  "near-quant-agi-emergence-human-level-general-intelligence": {
+    "title": "AGI Emergence (Human-Level General Intelligence)",
+    "description": "Emergence of human-level general intelligence with systems matching broad cognitive capability across domains.",
+    "primaryTopic": "ai",
+    "tags": [
+      "agi",
+      "general-intelligence",
+      "reasoning-systems",
+      "multimodal-learning"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "intelligence-systems",
+      "automation"
+    ],
+    "pillars": [
+      "ai"
+    ],
+    "date": "2032-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2032,
+      "endYear": 2032,
+      "year": 2032,
+      "precision": "year",
+      "era": "near-future",
       "significance": "prediction",
       "category": "technology"
     }
   },
-  "ath-future-tech-vr-overview": {
-    "title": "Virtual Reality and Immersive Technology Overview",
-    "description": "Explore virtual reality and immersive technologies that blur digital and physical worlds.",
-    "primaryTopic": "realities",
-    "tags": ["vr", "immersive-tech"],
-    "date": "2025-12-26",
+  "near-quant-fusion-commercialization-forecast-sample": {
+    "title": "Fusion Commercialization Forecast Sample",
+    "description": "Sample timeline entry showing how forecast, dependency, and leading-indicator frontmatter is ingested by TimeWeave.",
+    "primaryTopic": "energy",
+    "tags": [
+      "fusion",
+      "forecast",
+      "leading-indicators",
+      "commercialization",
+      "sample"
+    ],
+    "categories": [
+      "technology",
+      "energy",
+      "physics"
+    ],
+    "pillars": [
+      "energy",
+      "quantum-technologies"
+    ],
+    "date": "2025-05-20T00:00:00.000Z",
     "timeline": {
-      "year": 2024,
-      "quarter": "Q3",
+      "startYear": 2050,
+      "endYear": 2055,
+      "year": 2050,
+      "precision": "range",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    },
+    "links": [
+      {
+        "type": "enables",
+        "targetId": "near-super-intel-superintelligent-ai-significantly-beyond-human-intelligence",
+        "strength": 0.7,
+        "rationale": "Commercial fusion would materially expand compute capacity for large AI systems."
+      },
+      {
+        "type": "depends-on",
+        "targetId": "near-quant-quantum-computing-commercialization-error-corrected-systems",
+        "strength": 0.5,
+        "rationale": "Better quantum tools can accelerate materials and simulation workflows."
+      }
+    ],
+    "dependencies": [
+      {
+        "sourceEventId": "ath-future-tech-nanotech-overview",
+        "targetEventId": "near-quant-fusion-commercialization-forecast-sample",
+        "dependencyType": "accelerating",
+        "strength": 0.6,
+        "lagTime": 4,
+        "description": "Nanofabrication and materials discovery improve magnet and reactor engineering."
+      },
+      {
+        "sourceEventId": "near-quant-quantum-computing-commercialization-error-corrected-systems",
+        "targetEventId": "near-quant-fusion-commercialization-forecast-sample",
+        "dependencyType": "accelerating",
+        "strength": 0.5,
+        "lagTime": 3,
+        "description": "Quantum simulation tools could speed up plasma and materials research."
+      },
+      {
+        "sourceEventId": "near-quant-fusion-commercialization-forecast-sample",
+        "targetEventId": "near-super-intel-superintelligent-ai-significantly-beyond-human-intelligence",
+        "dependencyType": "enabling",
+        "strength": 0.7,
+        "lagTime": 5,
+        "description": "Abundant energy expands compute budgets for frontier AI systems."
+      }
+    ],
+    "leadingIndicators": [
+      {
+        "indicatorId": "fusion-nif-gain",
+        "name": "NIF Energy Gain Ratio",
+        "source": "https://www.llnl.gov/news",
+        "frequency": "quarterly",
+        "expectedTrend": "upward",
+        "correlationWithEvent": 0.85,
+        "latestValue": 1.8,
+        "latestDate": "2026-03-15T00:00:00Z",
+        "trendVector": 0.25
+      },
+      {
+        "indicatorId": "fusion-venture-funding",
+        "name": "Private Fusion Venture Funding",
+        "source": "crunchbase_api",
+        "frequency": "monthly",
+        "expectedTrend": "upward",
+        "correlationWithEvent": 0.65,
+        "latestValue": 2500,
+        "latestDate": "2026-05-15T00:00:00Z",
+        "trendVector": 100
+      },
+      {
+        "indicatorId": "superconducting-magnet-cost",
+        "name": "Superconducting Magnet Cost Curve",
+        "source": "industry_reports",
+        "frequency": "annual",
+        "expectedTrend": "downward",
+        "correlationWithEvent": 0.72,
+        "latestValue": 0.78,
+        "latestDate": "2026-01-10T00:00:00Z",
+        "trendVector": -0.08
+      }
+    ],
+    "forecast": {
+      "eventId": "near-quant-fusion-commercialization-forecast-sample",
+      "forecastId": "forecast-fusion-commercialization-2026-05",
+      "createdAt": "2026-05-20T00:00:00Z",
+      "updatedAt": "2026-05-20T00:00:00Z",
+      "timing": {
+        "uncertaintyRange": {
+          "p10": 2042,
+          "p25": 2046,
+          "p50": 2050,
+          "p75": 2054,
+          "p90": 2060
+        }
+      },
+      "confidence": 0.68,
+      "forecastStatus": "active-forecast",
+      "claimStrengthLevel": "level-2-confident",
+      "degradationSignal": 0.05,
+      "predictiveHorizon": 20,
+      "assumptionSet": "baseline-2026",
+      "updateHistory": [
+        {
+          "timestamp": "2026-05-20T00:00:00Z",
+          "oldP50": 2053,
+          "newP50": 2050,
+          "reason": "Stronger materials and confinement signals improved the outlook",
+          "triggeringSignals": [
+            "high-temperature-superconductor-progress",
+            "plasma-confinement-gain"
+          ],
+          "modelVersion": "v1.0",
+          "author": "copilot"
+        }
+      ],
+      "scenarioForecasts": [
+        {
+          "scenario": "acceleration",
+          "probability": 0.25,
+          "p50Year": 2044,
+          "uncertaintyRange": {
+            "p10": 2040,
+            "p25": 2042,
+            "p50": 2044,
+            "p75": 2047,
+            "p90": 2051
+          },
+          "description": "Rapid progress in materials, magnets, and automation compresses the commercialization timeline."
+        },
+        {
+          "scenario": "disruption",
+          "probability": 0.15,
+          "p50Year": 2063,
+          "uncertaintyRange": {
+            "p10": 2058,
+            "p25": 2060,
+            "p50": 2063,
+            "p75": 2067,
+            "p90": 2072
+          },
+          "description": "Regulatory delays or a major technical setback pushes deployment back."
+        },
+        {
+          "scenario": "stagnation",
+          "probability": 0.5,
+          "p50Year": 2051,
+          "uncertaintyRange": {
+            "p10": 2047,
+            "p25": 2049,
+            "p50": 2051,
+            "p75": 2055,
+            "p90": 2060
+          },
+          "description": "Incremental progress continues without a major breakthrough."
+        },
+        {
+          "scenario": "wild-card",
+          "probability": 0.1,
+          "p50Year": 2038,
+          "uncertaintyRange": {
+            "p10": 2034,
+            "p25": 2036,
+            "p50": 2038,
+            "p75": 2041,
+            "p90": 2046
+          },
+          "description": "A paradigm shift in confinement or materials accelerates commercialization dramatically."
+        }
+      ],
+      "modelBreakdown": [
+        {
+          "model": "baseline-statistical",
+          "p50Year": 2051,
+          "confidence": 0.7,
+          "explanation": "Baseline hazard model favors a mid-century deployment window."
+        },
+        {
+          "model": "graph-propagation",
+          "p50Year": 2048,
+          "confidence": 0.64,
+          "explanation": "Downstream gains from magnets and AI-assisted materials discovery compress the timeline."
+        },
+        {
+          "model": "monte-carlo-scenario",
+          "p50Year": 2050,
+          "confidence": 0.66,
+          "explanation": "Scenario mixture centers on the baseline with modest upside skew."
+        },
+        {
+          "model": "expert-prior",
+          "p50Year": 2052,
+          "confidence": 0.52,
+          "explanation": "Expert priors remain cautious because commercialization still depends on multiple bottlenecks."
+        }
+      ]
+    }
+  },
+  "near-quant-molecular-assemblers-early-nanotechnology-manufacturing": {
+    "title": "Molecular Assemblers (Early Nanotechnology Manufacturing)",
+    "description": "Early molecular assembler commercialization phase introduces nanotechnology manufacturing with atomic-scale process control.",
+    "primaryTopic": "nanotechnology",
+    "tags": [
+      "molecular-assemblers",
+      "nanotechnology",
+      "atomic-precision",
+      "manufacturing"
+    ],
+    "categories": [
+      "technology",
+      "nanotech",
+      "manufacturing",
+      "materials"
+    ],
+    "pillars": [
+      "nanotech",
+      "printing-nanofabrication",
+      "advanced-materials"
+    ],
+    "date": "2033-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2033,
+      "endYear": 2036,
+      "year": 2033,
+      "precision": "range",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-quant-nuclear-fusion-power-plants-commercial-operation": {
+    "title": "Nuclear Fusion Power Plants (Commercial Operation)",
+    "description": "Commercial fusion power plants begin operation with net-positive output and grid-connected deployment.",
+    "primaryTopic": "energy",
+    "tags": [
+      "nuclear-fusion",
+      "tokamak",
+      "stellarator",
+      "clean-energy"
+    ],
+    "categories": [
+      "technology",
+      "energy",
+      "fusion",
+      "infrastructure"
+    ],
+    "pillars": [
+      "energy"
+    ],
+    "date": "2035-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2035,
+      "endYear": 2035,
+      "year": 2035,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-quant-personal-ai-agents-autonomous-digital-assistants": {
+    "title": "Personal AI Agents (Autonomous Digital Assistants)",
+    "description": "Personal autonomous AI agents become proactive, context-aware representatives operating across user systems and workflows.",
+    "primaryTopic": "ai",
+    "tags": [
+      "personal-ai",
+      "autonomous-assistants",
+      "context-aware-ai",
+      "delegation"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "agents",
+      "automation"
+    ],
+    "pillars": [
+      "ai"
+    ],
+    "date": "2034-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2034,
+      "endYear": 2034,
+      "year": 2034,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-quant-quantum-computing-commercialization-error-corrected-systems": {
+    "title": "Quantum Computing Commercialization (Error-Corrected Systems)",
+    "description": "Commercialization phase for error-corrected quantum systems, transitioning from noisy prototypes to early fault-tolerant utility.",
+    "primaryTopic": "quantum",
+    "tags": [
+      "quantum-computing",
+      "error-correction",
+      "fault-tolerance",
+      "logical-qubits"
+    ],
+    "categories": [
+      "technology",
+      "quantum",
+      "computing",
+      "infrastructure"
+    ],
+    "pillars": [
+      "quantum-technologies"
+    ],
+    "date": "2031-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2031,
+      "endYear": 2035,
+      "year": 2031,
+      "precision": "range",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-quant-quantum-internet-nodes-first-intercity-links": {
+    "title": "Quantum Internet Nodes (First Intercity Links)",
+    "description": "First intercity quantum internet nodes establish early quantum-network infrastructure and secure entanglement-enabled communication.",
+    "primaryTopic": "quantum",
+    "tags": [
+      "quantum-internet",
+      "entanglement",
+      "qkd",
+      "quantum-networking"
+    ],
+    "categories": [
+      "technology",
+      "quantum",
+      "networking",
+      "security"
+    ],
+    "pillars": [
+      "quantum-technologies"
+    ],
+    "date": "2039-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2039,
+      "endYear": 2039,
+      "year": 2039,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-quant-space-based-solar-power-demonstration": {
+    "title": "Space-Based Solar Power Demonstration",
+    "description": "Demonstration phase for orbital solar collection and power beaming to Earth-scale receivers.",
+    "primaryTopic": "energy",
+    "tags": [
+      "space-solar",
+      "orbital-power",
+      "microwave-transmission",
+      "renewables"
+    ],
+    "categories": [
+      "technology",
+      "energy",
+      "space",
+      "infrastructure"
+    ],
+    "pillars": [
+      "energy",
+      "space-colonization"
+    ],
+    "date": "2036-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2036,
+      "endYear": 2036,
+      "year": 2036,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-quant-synthetic-biology-organisms-designed-life": {
+    "title": "Synthetic Biology Organisms (Designed Life)",
+    "description": "Designed biological systems transition to engineered organisms created for targeted functional outcomes.",
+    "primaryTopic": "biotech",
+    "tags": [
+      "synthetic-biology",
+      "designed-life",
+      "crispr",
+      "genome-synthesis"
+    ],
+    "categories": [
+      "technology",
+      "biotech",
+      "synthetic-biology",
+      "manufacturing"
+    ],
+    "pillars": [
+      "biotechnology"
+    ],
+    "date": "2037-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2037,
+      "endYear": 2037,
+      "year": 2037,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-artificial-wombs-ectogenesis": {
+    "title": "Artificial Wombs (Ectogenesis)",
+    "description": "Artificial womb systems enable full external gestation, expanding reproductive options and reducing pregnancy-related risk.",
+    "primaryTopic": "ectogenesis",
+    "tags": [
+      "artificial-wombs",
+      "ectogenesis",
+      "reproductive-technology",
+      "external-gestation"
+    ],
+    "categories": [
+      "technology",
+      "biotechnology",
+      "health",
+      "society"
+    ],
+    "pillars": [
+      "biotechnology",
+      "transhumanism"
+    ],
+    "date": "2047-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2047,
+      "endYear": 2047,
+      "year": 2047,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-cybernetic-organisms-widespread-bio-digital-integration": {
+    "title": "Cybernetic Organisms Widespread (Bio-Digital Integration)",
+    "description": "Cybernetic organisms become widespread through mature bio-digital integration across medicine, labor, and daily life.",
+    "primaryTopic": "cybernetic-organisms",
+    "tags": [
+      "cybernetic-organisms",
+      "bio-digital-integration",
+      "bci",
+      "augmentation"
+    ],
+    "categories": [
+      "technology",
+      "bioengineering",
+      "cybernetics",
+      "human-enhancement"
+    ],
+    "pillars": [
+      "transhumanism",
+      "wearables-implantables",
+      "neurotechnology"
+    ],
+    "date": "2044-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2044,
+      "endYear": 2044,
+      "year": 2044,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-extended-lifespan-150-plus-years-achievable": {
+    "title": "Extended Lifespan (150+ Years Achievable)",
+    "description": "Major longevity breakthroughs make lifespans of 150+ years achievable for growing portions of the population.",
+    "primaryTopic": "longevity",
+    "tags": [
+      "extended-lifespan",
+      "longevity",
+      "aging-reversal",
+      "cellular-repair"
+    ],
+    "categories": [
+      "technology",
+      "biotechnology",
+      "health",
+      "human-enhancement"
+    ],
+    "pillars": [
+      "biotechnology",
+      "transhumanism"
+    ],
+    "date": "2045-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2045,
+      "endYear": 2045,
+      "year": 2045,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-global-brain-to-brain-communication-network-early-trials": {
+    "title": "Global Brain-to-Brain Communication Network (Early Trials)",
+    "description": "Early global trials connect participants through direct neural interfaces, enabling experimental brain-to-brain communication at scale.",
+    "primaryTopic": "brain-to-brain-network",
+    "tags": [
+      "brain-to-brain",
+      "bci",
+      "neural-networking",
+      "telepathy"
+    ],
+    "categories": [
+      "technology",
+      "neuroscience",
+      "communication",
+      "human-enhancement"
+    ],
+    "pillars": [
+      "neurotechnology",
+      "transhumanism"
+    ],
+    "date": "2048-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2048,
+      "endYear": 2048,
+      "year": 2048,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-memory-augmentation-implants-commercial": {
+    "title": "Memory Augmentation Implants (Commercial)",
+    "description": "Commercial memory augmentation implants enable direct interfaces for encoding and recall in everyday cognitive workflows.",
+    "primaryTopic": "human-enhancement",
+    "tags": [
+      "memory-augmentation",
+      "neural-implants",
+      "bci",
+      "cognitive-enhancement"
+    ],
+    "categories": [
+      "technology",
+      "human-enhancement",
+      "neurotech",
+      "superintelligence"
+    ],
+    "pillars": [
+      "neurotechnology",
+      "transhumanism"
+    ],
+    "date": "2042-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2042,
+      "endYear": 2042,
+      "year": 2042,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-molecular-medicine-nanobots-in-bloodstream": {
+    "title": "Molecular Medicine (Nanobots in Bloodstream)",
+    "description": "Programmable nanobots in the bloodstream enable precision intervention, real-time diagnostics, and continuous cellular-level treatment.",
+    "primaryTopic": "molecular-medicine",
+    "tags": [
+      "molecular-medicine",
+      "nanobots",
+      "medical-nanotechnology",
+      "cellular-repair"
+    ],
+    "categories": [
+      "technology",
+      "biotechnology",
+      "health",
+      "nanotechnology"
+    ],
+    "pillars": [
+      "biotechnology",
+      "nanotech"
+    ],
+    "date": "2049-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2049,
+      "endYear": 2049,
+      "year": 2049,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-neuromorphic-computing-dominates-ai-infrastructure": {
+    "title": "Neuromorphic Computing Dominates AI Infrastructure",
+    "description": "Neuromorphic systems become dominant AI infrastructure, shifting compute from conventional accelerators to brain-like architectures.",
+    "primaryTopic": "superintelligence",
+    "tags": [
+      "neuromorphic-computing",
+      "ai-infrastructure",
+      "brain-inspired-compute",
+      "embodied-ai"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "superintelligence",
+      "compute-infrastructure"
+    ],
+    "pillars": [
+      "ai"
+    ],
+    "date": "2040-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2040,
+      "endYear": 2043,
+      "year": 2040,
+      "precision": "range",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-semantic-web-web-3-0-maturity-meaning-aware-internet": {
+    "title": "Semantic Web (Web 3.0 Maturity - Meaning-Aware Internet)",
+    "description": "Web 3.0 reaches semantic maturity with machine-interpretable meaning, enabling reasoning-native internet infrastructure.",
+    "primaryTopic": "superintelligence",
+    "tags": [
+      "semantic-web",
+      "web-3-0",
+      "knowledge-graphs",
+      "autonomous-agents"
+    ],
+    "categories": [
+      "technology",
+      "superintelligence",
+      "web",
+      "knowledge-systems"
+    ],
+    "pillars": [
+      "ai",
+      "blockchain"
+    ],
+    "date": "2041-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2041,
+      "endYear": 2041,
+      "year": 2041,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-space-elevator-construction-begins": {
+    "title": "Space Elevator Construction Begins",
+    "description": "Construction begins on early space elevator infrastructure, aiming to transform access between Earth's surface and orbit.",
+    "primaryTopic": "space-elevator",
+    "tags": [
+      "space-elevator",
+      "orbital-transport",
+      "carbon-nanotubes",
+      "tether-systems"
+    ],
+    "categories": [
+      "technology",
+      "space",
+      "infrastructure",
+      "transportation"
+    ],
+    "pillars": [
+      "space-colonization",
+      "advanced-materials"
+    ],
+    "date": "2046-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2046,
+      "endYear": 2046,
+      "year": 2046,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "near-super-intel-superintelligent-ai-significantly-beyond-human-intelligence": {
+    "title": "Superintelligent AI (Significantly Beyond Human Intelligence)",
+    "description": "AI systems cross into superintelligence with capabilities that significantly exceed human general cognition.",
+    "primaryTopic": "superintelligence",
+    "tags": [
+      "superintelligence",
+      "intelligence-explosion",
+      "recursive-self-improvement",
+      "ai-control"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "superintelligence",
+      "governance"
+    ],
+    "pillars": [
+      "ai"
+    ],
+    "date": "2043-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2043,
+      "endYear": 2043,
+      "year": 2043,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-5g-networks-expand": {
+    "title": "5G Networks Expand",
+    "description": "Broad 5G deployment expands high-throughput, low-latency mobile connectivity and supports real-time distributed compute applications.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "5g",
+      "mobile-networks",
+      "ultra-low-latency",
+      "edge-computing",
+      "massive-iot",
+      "millimeter-wave"
+    ],
+    "categories": [
+      "technology",
+      "connectivity",
+      "mobile",
+      "infrastructure"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2020-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2020,
+      "endYear": 2020,
+      "year": 2020,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-alphafold-2-protein-structures-200m-plus-predictions-released": {
+    "title": "AlphaFold 2 Protein Structures (200M+ Predictions Released)",
+    "description": "Release of 200M+ AlphaFold-predicted protein structures marks a major expansion of AI-supported structural biology resources.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "alphafold-2",
+      "protein-structure",
+      "deepmind",
+      "structural-biology",
+      "drug-discovery",
+      "synthetic-biology",
+      "structural-genomics"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "biotechnology",
+      "science"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2022-07-28T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2022,
+      "endYear": 2022,
+      "year": 2022,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-autonomous-vehicles-expand-waymo-tesla-fsd-cruise": {
+    "title": "Autonomous Vehicles Expand (Waymo, Tesla FSD, Cruise)",
+    "description": "Expansion of autonomous driving deployments across leading programs signals growing operational maturity in constrained urban and highway domains.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "autonomous-vehicles",
+      "waymo",
+      "tesla-fsd",
+      "cruise",
+      "sensor-fusion",
+      "adas",
+      "urban-mobility"
+    ],
+    "categories": [
+      "technology",
+      "mobility",
+      "ai",
+      "robotics"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2025-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2025,
+      "endYear": 2025,
+      "year": 2025,
+      "precision": "year",
+      "era": "near-future",
       "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-chatgpt-released-november": {
+    "title": "ChatGPT Released (November)",
+    "description": "ChatGPT's release brings conversational large language models to mainstream users, rapidly reshaping expectations for natural language interfaces.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "chatgpt",
+      "gpt-3.5",
+      "instructgpt",
+      "rlhf",
+      "conversational-ai",
+      "ai-adoption",
+      "chatbots"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "consumer-tech",
+      "interfaces"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2022-11-30T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2022,
+      "endYear": 2022,
+      "year": 2022,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-claude-sonnet-4-anthropic": {
+    "title": "Claude Sonnet 4 (Anthropic)",
+    "description": "Anthropic's Claude Sonnet 4 milestone highlights expanded context handling and stronger reasoning performance for enterprise and developer workflows.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "claude",
+      "sonnet-4",
+      "anthropic",
+      "constitutional-ai",
+      "long-context",
+      "reasoning",
+      "coding-assistance"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "developer-tools"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2024-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2024,
+      "endYear": 2024,
+      "year": 2024,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-covid-19-mrna-vaccines-pfizer-biontech-moderna": {
+    "title": "COVID-19 mRNA Vaccines (Pfizer/BioNTech, Moderna)",
+    "description": "Emergency authorization of COVID-19 mRNA vaccines validates rapid programmable vaccine design and large-scale deployment under crisis timelines.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "covid-19",
+      "mrna-vaccines",
+      "pfizer-biontech",
+      "moderna",
+      "pandemic-response",
+      "personalized-medicine"
+    ],
+    "categories": [
+      "technology",
+      "biotechnology",
+      "health",
+      "medicine"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2020-12-11T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2020,
+      "endYear": 2020,
+      "year": 2020,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-dall-e-text-to-image-ai": {
+    "title": "DALL-E (Text-to-Image AI)",
+    "description": "DALL-E demonstrates practical text-to-image synthesis, translating natural language prompts into coherent visual outputs.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "dall-e",
+      "text-to-image",
+      "generative-ai",
+      "gans",
+      "gpt-3",
+      "creative-ai",
+      "design-assistance"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "creative-tools",
+      "machine-learning"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2021-01-05T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2021,
+      "endYear": 2021,
+      "year": 2021,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-github-copilot": {
+    "title": "GitHub Copilot",
+    "description": "GitHub Copilot introduces AI pair programming into mainstream software workflows, embedding generative assistance directly in code editors.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "github-copilot",
+      "ai-pair-programming",
+      "codex",
+      "gpt-3",
+      "code-generation",
+      "developer-productivity"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "software",
+      "developer-tools"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2021-06-29T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2021,
+      "endYear": 2021,
+      "year": 2021,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-gpt-3-released-175b-parameters": {
+    "title": "GPT-3 Released (175B Parameters)",
+    "description": "GPT-3 scales autoregressive language modeling to 175B parameters, demonstrating strong few-shot behavior and broad API-first deployment potential.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "gpt-3",
+      "openai",
+      "few-shot-learning",
+      "scaling-laws",
+      "prompt-engineering",
+      "copilots",
+      "ai-applications"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "platforms"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2020-06-11T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2020,
+      "endYear": 2020,
+      "year": 2020,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-gpt-4-released": {
+    "title": "GPT-4 Released",
+    "description": "GPT-4 introduces stronger reasoning and multimodal capability, expanding reliable AI use across complex professional and consumer workflows.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "gpt-4",
+      "multimodal-ai",
+      "reasoning",
+      "chatgpt",
+      "professional-ai",
+      "benchmark-performance"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "platforms"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2023-03-14T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2023,
+      "endYear": 2023,
+      "year": 2023,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-james-webb-space-telescope-launch": {
+    "title": "James Webb Space Telescope Launch",
+    "description": "Launch of the James Webb Space Telescope expands deep infrared observational capacity and extends visibility into the early universe.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "jwst",
+      "james-webb-space-telescope",
+      "infrared-astronomy",
+      "exoplanets",
+      "galaxy-formation",
+      "cosmology"
+    ],
+    "categories": [
+      "technology",
+      "space",
+      "astronomy",
+      "science"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2021-12-25T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2021,
+      "endYear": 2021,
+      "year": 2021,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-sora-openai-video-generation": {
+    "title": "Sora (OpenAI Video Generation)",
+    "description": "Sora demonstrates high-fidelity text-to-video generation, extending generative AI from static imagery into coherent dynamic scene synthesis.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "sora",
+      "openai",
+      "text-to-video",
+      "video-generation",
+      "diffusion-transformers",
+      "filmmaking",
+      "simulation"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "creative-tools",
+      "media"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2024-02-15T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2024,
+      "endYear": 2024,
+      "year": 2024,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-stable-diffusion-open-source-text-to-image": {
+    "title": "Stable Diffusion (Open-Source Text-to-Image)",
+    "description": "Stable Diffusion brings open-source text-to-image generation to broad users and developers, accelerating creative AI experimentation and deployment.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "stable-diffusion",
+      "text-to-image",
+      "diffusion-models",
+      "latent-space",
+      "open-source-ai",
+      "content-creation",
+      "model-customization"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "creative-tools",
+      "open-source"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2022-08-22T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2022,
+      "endYear": 2022,
+      "year": 2022,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-volvo-crash-proof-car-concepts-radar-sonar-camera-fusion": {
+    "title": "Volvo Crash-Proof Car Concepts (Radar/Sonar/Camera Fusion)",
+    "description": "Volvo's crash-proof concept direction emphasizes multi-sensor fusion for proactive vehicle safety and near-zero-collision operation.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "volvo",
+      "active-safety",
+      "sensor-fusion",
+      "radar",
+      "sonar",
+      "camera-systems",
+      "autonomous-driving"
+    ],
+    "categories": [
+      "technology",
+      "mobility",
+      "automotive",
+      "ai"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2020-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2020,
+      "endYear": 2020,
+      "year": 2020,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "now-ai-accell-xprize-avatar-robot-avatar-competition-launched": {
+    "title": "XPRIZE Avatar (Robot Avatar Competition Launched)",
+    "description": "The XPRIZE Avatar competition launches to accelerate systems that enable humans to project skilled physical presence through robotic embodiments.",
+    "primaryTopic": "ai-accell",
+    "tags": [
+      "xprize-avatar",
+      "telepresence",
+      "teleoperation",
+      "robotics",
+      "vr",
+      "embodied-telepresence"
+    ],
+    "categories": [
+      "technology",
+      "robotics",
+      "ai",
+      "interfaces"
+    ],
+    "pillars": [
+      "ai-accell"
+    ],
+    "date": "2021-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2021,
+      "endYear": 2021,
+      "year": 2021,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "now-ai-integration-agi-precursors-narrow-agi-claims-emerge": {
+    "title": "AGI Precursors/Narrow AGI Claims Emerge",
+    "description": "Claims of AGI precursors and narrow AGI emerge as models achieve broad cross-domain competence on many benchmarked cognitive tasks.",
+    "primaryTopic": "ai-integration",
+    "tags": [
+      "agi",
+      "narrow-agi",
+      "llms",
+      "multimodal-models",
+      "reasoning-systems",
+      "automated-research",
+      "economic-transformation"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "economy"
+    ],
+    "pillars": [
+      "ai-integration"
+    ],
+    "date": "2028-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2028,
+      "endYear": 2028,
+      "year": 2028,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "now-ai-integration-ar-glasses-mainstream-apple-vision-successor-meta": {
+    "title": "AR Glasses Mainstream (Apple Vision Successor, Meta)",
+    "description": "Mainstream AR glasses adoption brings lightweight all-day spatial interfaces into routine work, communication, and navigation contexts.",
+    "primaryTopic": "ai-integration",
+    "tags": [
+      "ar-glasses",
+      "spatial-computing",
+      "wearable-computing",
+      "apple-vision",
+      "meta",
+      "hands-free-work",
+      "navigation"
+    ],
+    "categories": [
+      "technology",
+      "interfaces",
+      "consumer-tech",
+      "spatial-computing"
+    ],
+    "pillars": [
+      "ai-integration"
+    ],
+    "date": "2031-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2031,
+      "endYear": 2031,
+      "year": 2031,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "now-ai-integration-brain-computer-interfaces-commercial-neuralink-type": {
+    "title": "Brain-Computer Interfaces (Commercial, Neuralink-Type)",
+    "description": "Commercial brain-computer interfaces move beyond clinical pilots into consumer-facing interaction products with direct neural input pathways.",
+    "primaryTopic": "ai-integration",
+    "tags": [
+      "bci",
+      "brain-computer-interface",
+      "neuralink",
+      "electrode-arrays",
+      "signal-processing",
+      "thought-to-text",
+      "sensory-expansion"
+    ],
+    "categories": [
+      "technology",
+      "neurotechnology",
+      "ai",
+      "interfaces"
+    ],
+    "pillars": [
+      "ai-integration"
+    ],
+    "date": "2029-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2029,
+      "endYear": 2029,
+      "year": 2029,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "now-ai-integration-gene-therapy-becomes-routine": {
+    "title": "Gene Therapy Becomes Routine",
+    "description": "Gene therapy transitions from specialized intervention to routine clinical practice across a widening set of inherited disorders.",
+    "primaryTopic": "ai-integration",
+    "tags": [
+      "gene-therapy",
+      "crispr",
+      "viral-vectors",
+      "genetic-disorders",
+      "sickle-cell",
+      "blindness-reversal",
+      "hereditary-disease"
+    ],
+    "categories": [
+      "technology",
+      "biotechnology",
+      "health",
+      "medicine"
+    ],
+    "pillars": [
+      "ai-integration"
+    ],
+    "date": "2027-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2027,
+      "endYear": 2027,
+      "year": 2027,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "now-ai-integration-lab-grown-organs-for-transplantation": {
+    "title": "Lab-Grown Organs for Transplantation",
+    "description": "Engineered organ generation from patient-derived cells reaches clinical transplant readiness, reducing dependence on donor scarcity.",
+    "primaryTopic": "ai-integration",
+    "tags": [
+      "lab-grown-organs",
+      "transplantation",
+      "tissue-engineering",
+      "stem-cells",
+      "3d-bioprinting",
+      "personalized-medicine"
+    ],
+    "categories": [
+      "technology",
+      "biotechnology",
+      "health",
+      "medicine"
+    ],
+    "pillars": [
+      "ai-integration"
+    ],
+    "date": "2028-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2028,
+      "endYear": 2028,
+      "year": 2028,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "now-ai-integration-neuromorphic-chips-in-data-centers": {
+    "title": "Neuromorphic Chips in Data Centers",
+    "description": "Neuromorphic processors enter data-center deployments, introducing event-driven architectures that improve AI efficiency for selective inference workloads.",
+    "primaryTopic": "ai-integration",
+    "tags": [
+      "neuromorphic-chips",
+      "data-centers",
+      "brain-inspired-computing",
+      "ai-accelerators",
+      "event-driven",
+      "edge-ai",
+      "robotics"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "hardware",
+      "infrastructure"
+    ],
+    "pillars": [
+      "ai-integration"
+    ],
+    "date": "2032-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2032,
+      "endYear": 2032,
+      "year": 2032,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "now-ai-integration-solid-state-batteries-commercialize": {
+    "title": "Solid-State Batteries Commercialize",
+    "description": "Commercial solid-state batteries deliver improved energy density, charging performance, and safety characteristics compared with mainstream lithium-ion systems.",
+    "primaryTopic": "ai-integration",
+    "tags": [
+      "solid-state-batteries",
+      "energy-density",
+      "fast-charging",
+      "battery-safety",
+      "ev",
+      "grid-storage",
+      "aviation-electrification"
+    ],
+    "categories": [
+      "technology",
+      "energy",
+      "mobility",
+      "materials"
+    ],
+    "pillars": [
+      "ai-integration"
+    ],
+    "date": "2030-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2030,
+      "endYear": 2030,
+      "year": 2030,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "prediction",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-1tb-sd-cards-available": {
+    "title": "1TB SD Cards Available",
+    "description": "Availability of terabyte-class SD storage marks a major jump in portable media capacity for mobile and edge capture workflows.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "sd-card",
+      "flash-memory",
+      "portable-storage",
+      "terabyte",
+      "4k-video",
+      "mobile-content-creation"
+    ],
+    "categories": [
+      "technology",
+      "hardware",
+      "storage",
+      "mobile"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2014-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2014,
+      "endYear": 2014,
+      "year": 2014,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-alphago-defeats-go-professional": {
+    "title": "AlphaGo Defeats Go Professional",
+    "description": "AlphaGo's victory over a professional Go player demonstrates major progress in deep reinforcement learning and strategic AI decision-making.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "alphago",
+      "go",
+      "deep-reinforcement-learning",
+      "game-ai",
+      "deep-blue",
+      "ai-capabilities"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "research"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2015-10-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2015,
+      "endYear": 2015,
+      "year": 2015,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-alphago-defeats-lee-sedol-go-world-champion": {
+    "title": "AlphaGo Defeats Lee Sedol (Go World Champion)",
+    "description": "AlphaGo's match victory over Lee Sedol demonstrates superhuman strategic performance in a complex intuition-heavy domain.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "alphago",
+      "lee-sedol",
+      "go",
+      "deep-reinforcement-learning",
+      "ai-safety",
+      "ai-capabilities"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "research"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2016-03-15T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2016,
+      "endYear": 2016,
+      "year": 2016,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-brain-machine-interfaces-paralysis-braingate-trials": {
+    "title": "Brain-Machine Interfaces for Paralysis (BrainGate Trials)",
+    "description": "BrainGate clinical trials advance brain-machine interfaces that translate neural signals into direct control of external assistive devices.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "brain-machine-interface",
+      "braingate",
+      "paralysis",
+      "neural-interface",
+      "assistive-tech",
+      "prosthetics"
+    ],
+    "categories": [
+      "technology",
+      "health",
+      "neurotechnology",
+      "interfaces"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2012-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2012,
+      "endYear": 2012,
+      "year": 2012,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-crispr-cas9-gene-editing-human-embryos-china": {
+    "title": "CRISPR-Cas9 Gene Editing in Human Embryos (China)",
+    "description": "Early reported CRISPR-Cas9 editing in non-viable human embryos marks a major inflection point in applied genome engineering and bioethics discourse.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "crispr",
+      "cas9",
+      "gene-editing",
+      "human-embryos",
+      "gene-therapy",
+      "bioethics",
+      "agricultural-biotech"
+    ],
+    "categories": [
+      "technology",
+      "biotechnology",
+      "genomics",
+      "health"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2015-04-18T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2015,
+      "endYear": 2015,
+      "year": 2015,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-curiosity-rover-mars-science-laboratory": {
+    "title": "Curiosity Rover (Mars Science Laboratory)",
+    "description": "Curiosity lands on Mars as a car-sized mobile laboratory, demonstrating precision sky crane delivery and long-duration surface science operations.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "curiosity",
+      "mars-science-laboratory",
+      "mars-rover",
+      "sky-crane",
+      "astrobiology",
+      "planetary-exploration"
+    ],
+    "categories": [
+      "technology",
+      "space",
+      "robotics",
+      "science"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2012-08-06T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2012,
+      "endYear": 2012,
+      "year": 2012,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-deep-learning-breakthrough-imagenet-alexnet": {
+    "title": "Deep Learning Breakthrough (ImageNet, AlexNet)",
+    "description": "ImageNet results from AlexNet demonstrate that deep convolutional neural networks trained with GPU acceleration can dramatically improve vision performance.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "deep-learning",
+      "imagenet",
+      "alexnet",
+      "convolutional-neural-networks",
+      "gpu-computing",
+      "computer-vision",
+      "autonomous-vehicles"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "computer-vision"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2012-09-30T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2012,
+      "endYear": 2012,
+      "year": 2012,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-event-horizon-telescope-images-black-hole-m87": {
+    "title": "Event Horizon Telescope Images Black Hole (M87*)",
+    "description": "The Event Horizon Telescope collaboration releases the first image of a black hole shadow, marking a landmark in observational astrophysics.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "event-horizon-telescope",
+      "black-hole",
+      "m87",
+      "vlbi",
+      "radio-astronomy",
+      "general-relativity"
+    ],
+    "categories": [
+      "technology",
+      "space",
+      "astronomy",
+      "science"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2019-04-10T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2019,
+      "endYear": 2019,
+      "year": 2019,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-gaia-telescope-launches": {
+    "title": "Gaia Telescope Launches",
+    "description": "ESA's Gaia mission launches to build a high-precision three-dimensional map of over a billion stars in the Milky Way.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "gaia",
+      "astrometry",
+      "hipparcos",
+      "stellar-cartography",
+      "milky-way",
+      "exoplanet-detection"
+    ],
+    "categories": [
+      "technology",
+      "space",
+      "astronomy",
+      "science"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2013-12-19T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2013,
+      "endYear": 2013,
+      "year": 2013,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-google-quantum-supremacy-claim-sycamore": {
+    "title": "Google Quantum Supremacy Claim (Sycamore)",
+    "description": "Google's Sycamore result claims quantum supremacy on a specialized benchmark, intensifying debate around practical quantum advantage and measurement criteria.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "quantum-computing",
+      "google",
+      "sycamore",
+      "quantum-supremacy",
+      "qubits",
+      "quantum-advantage"
+    ],
+    "categories": [
+      "technology",
+      "quantum",
+      "research",
+      "computing"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2019-10-23T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2019,
+      "endYear": 2019,
+      "year": 2019,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-gpt-1-released-openai": {
+    "title": "GPT-1 Released (OpenAI)",
+    "description": "OpenAI's GPT-1 demonstrates generative pre-training followed by task adaptation, helping define the modern foundation model trajectory.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "gpt-1",
+      "openai",
+      "generative-pretraining",
+      "language-modeling",
+      "few-shot-learning",
+      "foundation-models"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "nlp"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2018-06-11T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2018,
+      "endYear": 2018,
+      "year": 2018,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-gpt-2-released": {
+    "title": "GPT-2 Released",
+    "description": "GPT-2 demonstrates substantially improved long-form language generation, highlighting both capability gains and misuse concerns.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "gpt-2",
+      "language-models",
+      "text-generation",
+      "scaling-laws",
+      "ai-safety",
+      "ai-text-detection"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "nlp"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2019-02-14T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2019,
+      "endYear": 2019,
+      "year": 2019,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-ibm-watson-wins-jeopardy": {
+    "title": "IBM Watson Wins Jeopardy",
+    "description": "IBM Watson's Jeopardy victory demonstrates practical large-scale question-answering and natural language understanding in a high-visibility setting.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "ibm-watson",
+      "jeopardy",
+      "question-answering",
+      "natural-language-understanding",
+      "enterprise-ai",
+      "cognitive-computing"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "research",
+      "enterprise"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2011-02-16T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2011,
+      "endYear": 2011,
+      "year": 2011,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-ipad-released": {
+    "title": "iPad Released",
+    "description": "Release of the iPad establishes the modern consumer tablet category and expands touch-first personal computing.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "ipad",
+      "tablet",
+      "touch-first",
+      "mobile-productivity",
+      "education-tech",
+      "content-consumption"
+    ],
+    "categories": [
+      "technology",
+      "consumer-tech",
+      "mobile",
+      "computing"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2010-04-03T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2010,
+      "endYear": 2010,
+      "year": 2010,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-iter-fusion-project-construction-advances": {
+    "title": "ITER Fusion Project Construction Advances",
+    "description": "Major construction progress at ITER marks a critical systems-integration phase toward demonstrating sustained fusion power generation.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "iter",
+      "fusion",
+      "tokamak",
+      "plasma-physics",
+      "clean-energy",
+      "net-positive-energy"
+    ],
+    "categories": [
+      "technology",
+      "energy",
+      "science",
+      "infrastructure"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2019-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2019,
+      "endYear": 2019,
+      "year": 2019,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-light-peak-thunderbolt-3-100-gbps-capable-protocols-demonstrated": {
+    "title": "Light Peak/Thunderbolt 3 (100 Gbps Capable Protocols Demonstrated)",
+    "description": "Advances in Light Peak/Thunderbolt-class interconnects and protocol demonstrations push ultra-high-speed data transfer for demanding peripheral and compute workflows.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "light-peak",
+      "thunderbolt-3",
+      "high-speed-io",
+      "pcie",
+      "optical-interconnects",
+      "external-gpu",
+      "storage-arrays"
+    ],
+    "categories": [
+      "technology",
+      "hardware",
+      "connectivity",
+      "computing"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2018-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2018,
+      "endYear": 2018,
+      "year": 2018,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-personal-3d-printing-consumer-models-under-1000": {
+    "title": "Personal 3D Printing (Consumer Models Under $1000)",
+    "description": "Consumer 3D printers below $1000 expand access to desktop fabrication for homes, classrooms, and small teams.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "3d-printing",
+      "desktop-manufacturing",
+      "maker-movement",
+      "reprap",
+      "prototyping",
+      "custom-manufacturing"
+    ],
+    "categories": [
+      "technology",
+      "manufacturing",
+      "hardware",
+      "education"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2015-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2015,
+      "endYear": 2015,
+      "year": 2015,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-portable-wound-sealing-laser-pen-concept-development": {
+    "title": "Portable Wound-Sealing Laser Pen (Concept/Development)",
+    "description": "Concept and development of a portable wound-sealing laser pen for point-of-care tissue closure in constrained settings.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "laser-pen",
+      "wound-sealing",
+      "point-of-care",
+      "medical-lasers",
+      "field-medicine",
+      "emergency-response"
+    ],
+    "categories": [
+      "technology",
+      "health",
+      "medical-devices",
+      "emergency-care"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2017-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2017,
+      "endYear": 2017,
+      "year": 2017,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "trend",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-raspberry-pi-released": {
+    "title": "Raspberry Pi Released",
+    "description": "Release of Raspberry Pi introduces an inexpensive capable computer that accelerates maker culture and practical computing education.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "raspberry-pi",
+      "single-board-computer",
+      "maker-movement",
+      "iot",
+      "educational-computing",
+      "hobbyist-computing"
+    ],
+    "categories": [
+      "technology",
+      "hardware",
+      "education",
+      "maker"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2012-02-29T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2012,
+      "endYear": 2012,
+      "year": 2012,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-siri-voice-assistant": {
+    "title": "Siri (Voice Assistant)",
+    "description": "Introduction of Siri as a built-in mobile voice assistant establishes conversational AI as a mainstream interface layer.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "siri",
+      "voice-assistant",
+      "speech-recognition",
+      "natural-language-processing",
+      "conversational-ai",
+      "voice-interface"
+    ],
+    "categories": [
+      "technology",
+      "mobile",
+      "ai",
+      "interfaces"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2011-10-04T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2011,
+      "endYear": 2011,
+      "year": 2011,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-solar-impulse-2-around-world-solar-flight": {
+    "title": "Solar Impulse 2 (Around-World Solar Flight)",
+    "description": "Solar Impulse 2 demonstrates long-duration solar-electric aviation through a multi-stage around-the-world mission.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "solar-impulse-2",
+      "solar-flight",
+      "electric-aviation",
+      "renewable-energy",
+      "lightweight-materials",
+      "high-altitude-platforms"
+    ],
+    "categories": [
+      "technology",
+      "aviation",
+      "energy",
+      "sustainability"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2014-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2014,
+      "endYear": 2016,
+      "year": 2014,
+      "precision": "range",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-transformer-architecture-paper-attention-is-all-you-need": {
+    "title": "Transformer Architecture Paper (Attention Is All You Need)",
+    "description": "The Transformer paper introduces a self-attention-first architecture that reshapes sequence modeling and accelerates modern AI progress.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "transformers",
+      "attention-is-all-you-need",
+      "self-attention",
+      "nlp",
+      "bert",
+      "gpt",
+      "large-language-models"
+    ],
+    "categories": [
+      "technology",
+      "ai",
+      "machine-learning",
+      "nlp"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2017-06-12T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2017,
+      "endYear": 2017,
+      "year": 2017,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-mobile-ai-vr-headsets-oculus-rift-htc-vive-consumer-release": {
+    "title": "VR Headsets (Oculus Rift, HTC Vive Consumer Release)",
+    "description": "Consumer release of Oculus Rift and HTC Vive establishes modern immersive VR as a viable mainstream platform category.",
+    "primaryTopic": "mobile-ai",
+    "tags": [
+      "vr",
+      "oculus-rift",
+      "htc-vive",
+      "immersive-tech",
+      "motion-tracking",
+      "vr-gaming",
+      "virtual-meetings"
+    ],
+    "categories": [
+      "technology",
+      "interfaces",
+      "consumer-tech",
+      "immersive-media"
+    ],
+    "pillars": [
+      "mobile-ai"
+    ],
+    "date": "2016-04-05T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2016,
+      "endYear": 2016,
+      "year": 2016,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-4g-lte-networks-deploy": {
+    "title": "4G LTE Networks Deploy",
+    "description": "Commercial deployment of 4G LTE networks establishes high-throughput, lower-latency mobile broadband for rich real-time applications.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "4g",
+      "lte",
+      "mobile-broadband",
+      "low-latency",
+      "video-streaming",
+      "cloud-gaming",
+      "iot"
+    ],
+    "categories": [
+      "technology",
+      "internet",
+      "mobile",
+      "telecommunications"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2009-12-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2009,
+      "endYear": 2009,
+      "year": 2009,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-airbnb-founded-sharing-economy": {
+    "title": "Airbnb Founded (Sharing Economy)",
+    "description": "Founding of Airbnb demonstrates platform-mediated peer services and trust mechanisms that scale the sharing economy.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "airbnb",
+      "sharing-economy",
+      "peer-to-peer",
+      "trust-systems",
+      "gig-economy",
+      "asset-light-models"
+    ],
+    "categories": [
+      "technology",
+      "internet",
+      "platforms",
+      "digital-economy"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2008-08-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2008,
+      "endYear": 2008,
+      "year": 2008,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-android-os-htc-dream": {
+    "title": "Android OS (HTC Dream)",
+    "description": "Commercial debut of Android with the HTC Dream establishes an open mobile operating system model integrated with cloud-native services.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "android",
+      "htc-dream",
+      "mobile-os",
+      "open-source",
+      "google-services",
+      "smartphone-market"
+    ],
+    "categories": [
+      "technology",
+      "consumer-tech",
+      "mobile",
+      "internet"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2008-09-23T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2008,
+      "endYear": 2008,
+      "year": 2008,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-aws-infrastructure-services-begin": {
+    "title": "AWS Infrastructure Services Begin",
+    "description": "Amazon begins externalizing infrastructure capabilities, culminating in foundational AWS services such as SQS, S3, and EC2.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "aws",
+      "cloud-computing",
+      "iaas",
+      "sqs",
+      "s3",
+      "ec2",
+      "pay-per-use"
+    ],
+    "categories": [
+      "technology",
+      "cloud",
+      "infrastructure",
+      "internet"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2002-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2002,
+      "endYear": 2006,
+      "year": 2002,
+      "precision": "range",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-bitcoin-whitepaper-nakamoto": {
+    "title": "Bitcoin Whitepaper (Nakamoto)",
+    "description": "Publication of the Bitcoin whitepaper proposes a decentralized digital currency secured by proof-of-work and a chained transaction ledger.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "bitcoin",
+      "satoshi-nakamoto",
+      "blockchain",
+      "cryptocurrency",
+      "proof-of-work",
+      "distributed-ledger",
+      "defi",
+      "nfts"
+    ],
+    "categories": [
+      "technology",
+      "internet",
+      "finance",
+      "distributed-systems"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2008-10-31T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2008,
+      "endYear": 2008,
+      "year": 2008,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-facebook-launched": {
+    "title": "Facebook Launched",
+    "description": "Launch of Facebook, advancing real-identity social networking and algorithmic feed-based engagement at global scale.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "facebook",
+      "social-network",
+      "news-feed",
+      "network-effects",
+      "attention-economy",
+      "online-identity"
+    ],
+    "categories": [
+      "technology",
+      "internet",
+      "social-media",
+      "platforms"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2004-02-04T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2004,
+      "endYear": 2004,
+      "year": 2004,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-hadoop-released-open-source": {
+    "title": "Hadoop Released (Open-Source)",
+    "description": "Open-source release of Hadoop establishes a practical framework for distributed storage and large-scale data processing.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "hadoop",
+      "big-data",
+      "mapreduce",
+      "distributed-computing",
+      "data-lakes",
+      "machine-learning"
+    ],
+    "categories": [
+      "technology",
+      "data",
+      "infrastructure",
+      "software"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2006-01-01T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2006,
+      "endYear": 2006,
+      "year": 2006,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-human-genome-project-completed": {
+    "title": "Human Genome Project Completed",
+    "description": "Completion of the Human Genome Project delivers a reference map of human DNA and industrial-scale sequencing workflows.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "human-genome-project",
+      "genomics",
+      "dna-sequencing",
+      "personalized-medicine",
+      "crispr",
+      "genetic-engineering"
+    ],
+    "categories": [
+      "technology",
+      "biotechnology",
+      "genomics",
+      "health"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2003-04-14T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2003,
+      "endYear": 2003,
+      "year": 2003,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-iphone-released": {
+    "title": "iPhone Released",
+    "description": "Release of the iPhone establishes a multi-touch, software-centric smartphone model and accelerates the shift to mobile-first internet computing.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "iphone",
+      "smartphone",
+      "mobile-internet",
+      "multi-touch",
+      "app-ecosystem",
+      "location-services",
+      "mobile-photography"
+    ],
+    "categories": [
+      "technology",
+      "consumer-tech",
+      "mobile",
+      "internet"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2007-01-09T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2007,
+      "endYear": 2008,
+      "year": 2007,
+      "precision": "range",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-ipod-released": {
+    "title": "iPod Released",
+    "description": "Release of the iPod, combining high-capacity portable music with a tightly integrated digital ecosystem.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "ipod",
+      "apple",
+      "mp3-player",
+      "portable-music",
+      "itunes",
+      "digital-content"
+    ],
+    "categories": [
+      "technology",
+      "consumer-tech",
+      "digital-media",
+      "internet"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2001-10-23T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2001,
+      "endYear": 2001,
+      "year": 2001,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-second-life-virtual-worlds": {
+    "title": "Second Life (Virtual Worlds)",
+    "description": "Launch of Second Life as a persistent, user-built virtual world with a native digital economy.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "second-life",
+      "virtual-worlds",
+      "metaverse",
+      "virtual-economy",
+      "user-generated-content",
+      "digital-goods"
+    ],
+    "categories": [
+      "technology",
+      "internet",
+      "virtual-worlds",
+      "digital-economy"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2003-06-23T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2003,
+      "endYear": 2003,
+      "year": 2003,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-twitter-launched": {
+    "title": "Twitter Launched",
+    "description": "Launch of Twitter, establishing microblogging and rapid real-time information exchange in public social networks.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "twitter",
+      "microblogging",
+      "real-time",
+      "social-media",
+      "news-distribution",
+      "public-discourse"
+    ],
+    "categories": [
+      "technology",
+      "internet",
+      "social-media",
+      "communication"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2006-03-21T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2006,
+      "endYear": 2006,
+      "year": 2006,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-wikipedia-launched": {
+    "title": "Wikipedia Launched",
+    "description": "Launch of Wikipedia, establishing large-scale collaborative knowledge creation on the web.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "wikipedia",
+      "wiki",
+      "collaborative-knowledge",
+      "crowdsourcing",
+      "user-generated-content"
+    ],
+    "categories": [
+      "technology",
+      "internet",
+      "knowledge-systems",
+      "collaboration"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2001-01-15T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2001,
+      "endYear": 2001,
+      "year": 2001,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
+      "category": "technology"
+    }
+  },
+  "now-web-cloud-youtube-launched": {
+    "title": "YouTube Launched",
+    "description": "Launch of YouTube as a user-generated video platform that accelerates viral distribution and global creator participation.",
+    "primaryTopic": "web-cloud",
+    "tags": [
+      "youtube",
+      "video-platform",
+      "user-generated-content",
+      "viral-media",
+      "creator-economy",
+      "streaming"
+    ],
+    "categories": [
+      "technology",
+      "internet",
+      "media",
+      "platforms"
+    ],
+    "pillars": [
+      "web-cloud"
+    ],
+    "date": "2005-02-14T00:00:00.000Z",
+    "timeline": {
+      "startYear": 2005,
+      "endYear": 2005,
+      "year": 2005,
+      "precision": "year",
+      "era": "near-future",
+      "significance": "foundation",
       "category": "technology"
     }
   }

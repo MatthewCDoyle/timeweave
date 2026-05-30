@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.schema.json",
+  "$defs": {
+    "severity": {
+      "type": "string",
+      "enum": ["P0", "P1", "P2"]
+    },
+    "actionMode": {
+      "type": "string",
+      "enum": ["PROPOSE", "CLICK_TO_FIX", "AUTO_REMEDIATE", "ESCALATE"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["OPEN", "ACK", "RESOLVED"]
+    },
+    "remediation": {
+      "type": "object",
+      "required": ["severity", "actionMode"],
+      "properties": {
+        "alertId": { "type": "string" },
+        "id": { "type": "string" },
+        "issue": { "type": "string" },
+        "description": { "type": "string" },
+        "severity": { "$ref": "#/$defs/severity" },
+        "actionMode": { "$ref": "#/$defs/actionMode" },
+        "status": { "$ref": "#/$defs/status" },
+        "actionTarget": { "type": "string" },
+        "safetyJustification": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

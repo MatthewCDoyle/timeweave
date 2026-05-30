@@ -6,8 +6,15 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "build-report": "node scripts/generate-build-report.mjs",
+    "build:internal": "BUILD_DEV=false docusaurus build",
+    "build:dashboard": "npm run build-report && BUILD_DEV=true docusaurus build",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve"
+    "serve": "npm run build:internal && docusaurus serve",
+    "serve:internal": "npm run build:internal && docusaurus serve",
+    "serve:dashboard": "npm run build:dashboard && docusaurus serve",
+    "validate:pods": "node scripts/validate-pod-outputs.mjs",
+    "test:agents": "node --test tests/agents/*.test.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.1",
