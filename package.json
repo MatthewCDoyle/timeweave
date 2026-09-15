@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "validate:content": "node scripts/validate-content.mjs",
+    "prestart": "npm run validate:content",
+    "prebuild": "npm run validate:content",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "clear": "docusaurus clear",
@@ -20,7 +23,10 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.1",
-    "@docusaurus/types": "3.10.1"
+    "@docusaurus/types": "3.10.1",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "gray-matter": "^4.0.3"
   },
   "engines": {
     "node": ">=20.0"

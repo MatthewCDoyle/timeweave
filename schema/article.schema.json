@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://timeweave.dev/schema/article.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "title", "domain", "pillar", "epoch", "year_sort", "year_display",
+    "year_precision", "bucket", "confidence", "status", "requires", "sources",
+    "primary_event"
+  ],
+  "properties": {
+    "id": { "$ref": "shared-defs.schema.json#/$defs/domainPrefixedId" },
+    "title": { "type": "string", "minLength": 1 },
+    "domain": { "type": "string", "minLength": 1 },
+    "pillar": { "$ref": "shared-defs.schema.json#/$defs/pillar" },
+    "epoch": { "$ref": "shared-defs.schema.json#/$defs/epoch" },
+    "year_sort": { "type": ["number", "null"] },
+    "year_display": { "type": "string", "minLength": 1 },
+    "year_precision": { "$ref": "shared-defs.schema.json#/$defs/yearPrecision" },
+    "bucket": { "$ref": "shared-defs.schema.json#/$defs/bucket" },
+    "event_type": { "$ref": "shared-defs.schema.json#/$defs/authoredEventType" },
+    "confidence": { "$ref": "shared-defs.schema.json#/$defs/confidence" },
+    "status": { "$ref": "shared-defs.schema.json#/$defs/status" },
+    "requires": {
+      "type": "array",
+      "items": { "$ref": "shared-defs.schema.json#/$defs/domainPrefixedId" }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "dispute": {
+      "oneOf": [{ "$ref": "shared-defs.schema.json#/$defs/dispute" }, { "type": "null" }]
+    },
+    "primary_event": { "$ref": "shared-defs.schema.json#/$defs/domainPrefixedId" },
+    "related_events": {
+      "type": "array",
+      "items": { "$ref": "shared-defs.schema.json#/$defs/domainPrefixedId" }
+    },
+    "gap_pattern": {
+      "oneOf": [
+        { "enum": ["economic-suppression", "prerequisite-technology", "safety-adoption-lag", "emergent-capability-threshold", "none"] },
+        { "type": "null" }
+      ]
+    },
+    "predictive_signals": {
+      "type": "array",
+      "items": { "$ref": "shared-defs.schema.json#/$defs/predictiveSignal" }
+    },
+    "last_verified": { "type": ["string", "null"], "format": "date" },
+    "word_count": { "type": "number" },
+    "reading_time": { "type": "number" }
+  }
+}

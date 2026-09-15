@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://timeweave.dev/schema/event.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "title", "domain", "pillar", "epoch", "year_sort", "year_display",
+    "year_precision", "bucket", "confidence", "status", "requires", "sources"
+  ],
+  "properties": {
+    "id": { "$ref": "shared-defs.schema.json#/$defs/domainPrefixedId" },
+    "title": { "type": "string", "minLength": 1 },
+    "domain": { "type": "string", "minLength": 1 },
+    "pillar": { "$ref": "shared-defs.schema.json#/$defs/pillar" },
+    "epoch": { "$ref": "shared-defs.schema.json#/$defs/epoch" },
+    "year_sort": { "type": ["number", "null"] },
+    "year_display": { "type": "string", "minLength": 1 },
+    "year_precision": { "$ref": "shared-defs.schema.json#/$defs/yearPrecision" },
+    "bucket": { "$ref": "shared-defs.schema.json#/$defs/bucket" },
+    "event_type": { "$ref": "shared-defs.schema.json#/$defs/authoredEventType" },
+    "confidence": { "$ref": "shared-defs.schema.json#/$defs/confidence" },
+    "status": { "$ref": "shared-defs.schema.json#/$defs/status" },
+    "requires": {
+      "type": "array",
+      "items": { "$ref": "shared-defs.schema.json#/$defs/domainPrefixedId" }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "dispute": {
+      "oneOf": [{ "$ref": "shared-defs.schema.json#/$defs/dispute" }, { "type": "null" }]
+    },
+    "people": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "ripple_effect": { "type": "string" },
+    "article": { "oneOf": [{ "$ref": "shared-defs.schema.json#/$defs/domainPrefixedId" }, { "type": "null" }] },
+    "card_tier": {
+      "enum": ["epoch-defining", "infrastructure-defining", "convergence-defining", "speculative-defining"]
+    }
+  }
+}

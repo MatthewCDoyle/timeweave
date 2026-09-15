@@ -4,3 +4,4 @@ build/
 .cache-loader/
 .DS_Store
 npm-debug.log*
+.timeweave/generated/

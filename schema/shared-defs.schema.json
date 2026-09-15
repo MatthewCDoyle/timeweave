@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://timeweave.dev/schema/shared-defs.schema.json",
+  "$defs": {
+    "domainPrefixedId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+\\.[a-z0-9-]+$",
+      "description": "domain-prefix.slug, stable forever"
+    },
+    "pillar": {
+      "enum": ["computing", "life", "energy", "space", "interface", "earth", "signal", "foundations"]
+    },
+    "epoch": {
+      "enum": ["deep-past", "industrial-eras", "the-now", "near-future", "deep-future"]
+    },
+    "yearPrecision": {
+      "enum": ["exact", "approx", "range", "relative", "unresolved"]
+    },
+    "bucket": {
+      "enum": [
+        "Origin/Conceptual",
+        "Formalization",
+        "First Working Prototype",
+        "Industrialization/Commercialization",
+        "Digital/Computational Integration",
+        "Convergence/Modernization",
+        "Near-term Frontier",
+        "Deep Future"
+      ]
+    },
+    "authoredEventType": {
+      "description": "event_type as hand-authored; 'stub' is computed at build time and must never be authored directly",
+      "enum": ["milestone", "convergence", "speculative", "failed-prediction"]
+    },
+    "confidence": {
+      "enum": [
+        "solid",
+        "disputed",
+        "approx",
+        "speculative",
+        "speculative-low-confidence",
+        "speculative-narrative",
+        "speculative-unsourced",
+        "unsubstantiated",
+        "failed"
+      ]
+    },
+    "status": {
+      "type": ["string", "null"]
+    },
+    "disputeType": {
+      "enum": ["priority", "credit", "significance", "technical"]
+    },
+    "disputeResolution": {
+      "enum": ["unresolved", "reversed", "both-credited", "ongoing-litigation"]
+    },
+    "dispute": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "parties", "resolution"],
+      "properties": {
+        "type": { "$ref": "#/$defs/disputeType" },
+        "parties": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2
+        },
+        "resolution": { "$ref": "#/$defs/disputeResolution" },
+        "resolution_note": { "type": "string" }
+      }
+    },
+    "signalStrength": {
+      "enum": ["weak", "moderate", "strong"]
+    },
+    "predictiveSignal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trend", "current_evidence", "requires_resolution_of", "signal_strength"],
+      "properties": {
+        "trend": { "type": "string" },
+        "current_evidence": { "type": "string" },
+        "requires_resolution_of": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/domainPrefixedId" },
+          "minItems": 1
+        },
+        "signal_strength": { "$ref": "#/$defs/signalStrength" },
+        "last_checked": { "type": ["string", "null"], "format": "date" }
+      }
+    },
+    "coreFields": {
+      "type": "object",
+      "required": [
+        "id", "title", "domain", "pillar", "epoch", "year_sort", "year_display",
+        "year_precision", "bucket", "confidence", "status", "requires", "sources"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/domainPrefixedId" },
+        "title": { "type": "string", "minLength": 1 },
+        "domain": { "type": "string", "minLength": 1 },
+        "pillar": { "$ref": "#/$defs/pillar" },
+        "epoch": { "$ref": "#/$defs/epoch" },
+        "year_sort": { "type": ["number", "null"] },
+        "year_display": { "type": "string", "minLength": 1 },
+        "year_precision": { "$ref": "#/$defs/yearPrecision" },
+        "bucket": { "$ref": "#/$defs/bucket" },
+        "event_type": { "$ref": "#/$defs/authoredEventType" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "status": { "$ref": "#/$defs/status" },
+        "requires": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/domainPrefixedId" }
+        },
+        "sources": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "dispute": {
+          "oneOf": [{ "$ref": "#/$defs/dispute" }, { "type": "null" }]
+        }
+      }
+    }
+  }
+}
