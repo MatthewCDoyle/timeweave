@@ -1,0 +1,42 @@
+{
+  "acceleration": {
+    "label": "Acceleration",
+    "description": "Gaps between major breakthroughs shrink over time.",
+    "consideration": "Capture cycle-time compression and whether this entry shortens downstream innovation loops."
+  },
+  "convergence": {
+    "label": "Convergence",
+    "description": "Technologies increasingly combine into composite systems.",
+    "consideration": "Document which adjacent domains merge in this entry and what new capability appears at the intersection."
+  },
+  "abstraction-layers": {
+    "label": "Abstraction Layers",
+    "description": "Each era builds on prior layers, adding complexity and leverage.",
+    "consideration": "Specify the lower-layer dependencies this entry assumes and the higher-layer behaviors it enables."
+  },
+  "scale-expansion": {
+    "label": "Scale Expansion",
+    "description": "Systems move across scales: molecular to stellar.",
+    "consideration": "Record the primary scale of impact and whether this entry unlocks the next scale tier."
+  },
+  "information-centrality": {
+    "label": "Information Centrality",
+    "description": "Information processing becomes central across domains.",
+    "consideration": "Describe how sensing, modeling, computation, and feedback loops drive value in this entry."
+  },
+  "biological-digital-merger": {
+    "label": "Biological-Digital Merger",
+    "description": "The biological and digital boundary blurs over time.",
+    "consideration": "Note whether this entry directly couples biological systems with software, data, or machine control."
+  },
+  "energy-requirements": {
+    "label": "Energy Requirements",
+    "description": "Higher capability tiers require orders-of-magnitude more energy.",
+    "consideration": "Estimate energy intensity, bottlenecks, and enabling infrastructure required for scale."
+  },
+  "existential-inflection": {
+    "label": "Existential Inflection",
+    "description": "Prediction reliability drops sharply around singular transitions.",
+    "consideration": "Mark uncertainty boundaries and scenario branching where long-range forecasts become unstable."
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "ai": {
+    "label": "Artificial Intelligence (AI)",
+    "aliases": ["ai", "artificial-intelligence", "artificial intelligence"],
+    "color": "#4b9cff",
+    "order": 1
+  },
+  "xr-vr-ar-holography": {
+    "label": "Realities (XR / VR / AR) / Holography",
+    "aliases": ["xr", "vr", "ar", "holography", "realities", "metaverse", "spatial-computing"],
+    "color": "#55d6ff",
+    "order": 2
+  },
+  "immersive-tech": {
+    "label": "Immersive Tech (Sensory)",
+    "aliases": ["immersive-tech", "immersive", "sensory-tech", "sensory"],
+    "color": "#5de2c2",
+    "order": 3
+  },
+  "wearables-implantables": {
+    "label": "Wearables and Implantables",
+    "aliases": ["wearables", "implantables", "wearables-and-implantables", "bioelectronics"],
+    "color": "#8be86b",
+    "order": 4
+  },
+  "nanotech": {
+    "label": "Nanotech",
+    "aliases": ["nanotech", "nanotechnology", "molecular-manufacturing"],
+    "color": "#b8f26b",
+    "order": 5
+  },
+  "printing-nanofabrication": {
+    "label": "3D Printing / Nanofabricators",
+    "aliases": ["3d-printing", "additive-manufacturing", "nanofabrication", "nanofabricators"],
+    "color": "#ffd36a",
+    "order": 6
+  },
+  "advanced-materials": {
+    "label": "Advanced Materials",
+    "aliases": ["advanced-materials", "materials", "smart-materials"],
+    "color": "#ffb56f",
+    "order": 7
+  },
+  "biotechnology": {
+    "label": "Biotechnology",
+    "aliases": ["biotechnology", "biotech", "synthetic-biology", "genomics"],
+    "color": "#ff8e7b",
+    "order": 8
+  },
+  "neurotechnology": {
+    "label": "Neurotechnology",
+    "aliases": ["neurotechnology", "neurotech", "brain-computer-interface", "bci"],
+    "color": "#ff7fb0",
+    "order": 9
+  },
+  "robotics-autonomous-systems": {
+    "label": "Robotics and Autonomous Systems",
+    "aliases": ["robotics", "autonomous-systems", "intelligent-machines"],
+    "color": "#d182ff",
+    "order": 10
+  },
+  "autonomous-vehicles": {
+    "label": "Autonomous Vehicles",
+    "aliases": ["autonomous-vehicles", "self-driving", "av", "drones"],
+    "color": "#b58bff",
+    "order": 11
+  },
+  "smart-cities": {
+    "label": "Smart Cities",
+    "aliases": ["smart-cities", "urban-tech", "intelligent-infrastructure"],
+    "color": "#8ca2ff",
+    "order": 12
+  },
+  "internet-of-things": {
+    "label": "Internet of Things",
+    "aliases": ["internet-of-things", "iot", "connected-devices"],
+    "color": "#6eb5ff",
+    "order": 13
+  },
+  "blockchain": {
+    "label": "Blockchain",
+    "aliases": ["blockchain", "distributed-ledger", "web3"],
+    "color": "#58c6ff",
+    "order": 14
+  },
+  "energy": {
+    "label": "Energy",
+    "aliases": ["energy", "fusion", "renewables", "power-systems"],
+    "color": "#4fd8e5",
+    "order": 15
+  },
+  "marine-oceanic-tech": {
+    "label": "Marine and Oceanic Tech",
+    "aliases": ["marine-tech", "oceanic-tech", "blue-tech", "ocean-engineering"],
+    "color": "#41d8b8",
+    "order": 16
+  },
+  "agrotechnology": {
+    "label": "Agrotechnology",
+    "aliases": ["agrotechnology", "agritech", "precision-agriculture"],
+    "color": "#62d97d",
+    "order": 17
+  },
+  "climate-geoengineering": {
+    "label": "Climate and Geoengineering",
+    "aliases": ["climate-tech", "geoengineering", "carbon-removal", "climate-and-geoengineering"],
+    "color": "#8cd969",
+    "order": 18
+  },
+  "space-colonization": {
+    "label": "Space Colonization",
+    "aliases": ["space-colonization", "space-settlement", "off-world"],
+    "color": "#b8cb66",
+    "order": 19
+  },
+  "transhumanism": {
+    "label": "Transhumanism",
+    "aliases": ["transhumanism", "human-augmentation", "posthuman"],
+    "color": "#d8b767",
+    "order": 20
+  },
+  "quantum-technologies": {
+    "label": "Quantum Technologies",
+    "aliases": ["quantum", "quantum-tech", "quantum-technologies", "quantum-computing"],
+    "color": "#f5a46f",
+    "order": 21
+  }
+}

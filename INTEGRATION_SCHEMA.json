@@ -1,0 +1,421 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Timeline Event Schema Extension - Forecasting",
+  "description": "Extensions to your existing TimelineEvent schema to support predictive forecasting",
+  
+  "additions": {
+    "forecast": {
+      "type": "object",
+      "description": "Predictive forecast for event timing and probability",
+      "properties": {
+        "eventId": {
+          "type": "string",
+          "description": "Link to parent event"
+        },
+        "forecastId": {
+          "type": "string",
+          "description": "Unique forecast identifier"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "timing": {
+          "type": "object",
+          "properties": {
+            "uncertaintyRange": {
+              "type": "object",
+              "properties": {
+                "p10": { "type": "number", "description": "10th percentile (pessimistic)" },
+                "p25": { "type": "number" },
+                "p50": { "type": "number", "description": "Median (most likely)" },
+                "p75": { "type": "number" },
+                "p90": { "type": "number", "description": "90th percentile (optimistic)" }
+              },
+              "required": ["p10", "p50", "p90"]
+            },
+            "uncertainty": {
+              "type": "object",
+              "properties": {
+                "aleatoric": {
+                  "type": "object",
+                  "description": "Inherent randomness (clinical trial stochasticity, etc.)",
+                  "properties": {
+                    "magnitude": { "type": "number" },
+                    "source": { "type": "string" }
+                  }
+                },
+                "epistemic": {
+                  "type": "object",
+                  "description": "Knowledge gaps (limited historical data, speculation)",
+                  "properties": {
+                    "magnitude": { "type": "number" },
+                    "source": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Overall confidence in forecast (0–1)"
+        },
+        "forecastStatus": {
+          "type": "string",
+          "enum": ["historical", "active-forecast", "resolved", "retired", "paused"],
+          "description": "Current status of forecast"
+        },
+        "claimStrengthLevel": {
+          "type": "string",
+          "enum": [
+            "level-1-unfalsifiable",
+            "level-2-confident",
+            "level-3-speculative",
+            "level-4-excluded"
+          ],
+          "description": "How strong is this claim?"
+        },
+        "degradationSignal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "How stale is this forecast? (0=fresh, 1=very old)"
+        },
+        "predictiveHorizon": {
+          "type": "number",
+          "description": "Years ahead where forecast is meaningful (beyond this, confidence drops below useful threshold)"
+        },
+        "assumptionSet": {
+          "type": "string",
+          "description": "Which scenario assumptions generated this? (e.g., 'baseline-2025', 'acceleration-scenario')"
+        },
+        "updateHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "timestamp": { "type": "string", "format": "date-time" },
+              "oldP50": { "type": "number" },
+              "newP50": { "type": "number" },
+              "reason": { "type": "string", "description": "Why did forecast shift?" },
+              "triggeringSignals": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "modelVersion": { "type": "string" },
+              "author": { "type": "string" }
+            }
+          },
+          "description": "Audit trail of all forecast changes"
+        },
+        "scenarioForecasts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "scenario": {
+                "type": "string",
+                "enum": ["acceleration", "disruption", "stagnation", "wild-card"]
+              },
+              "probability": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "p50Year": { "type": "number" },
+              "uncertaintyRange": {
+                "$ref": "#/definitions/uncertaintyRange"
+              },
+              "description": { "type": "string" }
+            }
+          },
+          "description": "Alternative timelines under different assumptions"
+        },
+        "modelBreakdown": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "model": {
+                "type": "string",
+                "enum": [
+                  "baseline-statistical",
+                  "graph-propagation",
+                  "monte-carlo-scenario",
+                  "expert-prior"
+                ]
+              },
+              "p50Year": { "type": "number" },
+              "confidence": { "type": "number" },
+              "explanation": { "type": "string" }
+            }
+          },
+          "description": "What each model predicts (for transparency)"
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sourceEventId": {
+            "type": "string",
+            "description": "Event this depends on"
+          },
+          "targetEventId": {
+            "type": "string",
+            "description": "Event that depends on source"
+          },
+          "dependencyType": {
+            "type": "string",
+            "enum": [
+              "enabling",
+              "accelerating",
+              "inhibiting",
+              "alternative",
+              "amplifying"
+            ],
+            "description": "How strong is the dependency?"
+          },
+          "strength": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Strength of dependency (0=weak, 1=critical)"
+          },
+          "lagTime": {
+            "type": "number",
+            "description": "Years between source and target completion"
+          },
+          "description": {
+            "type": "string",
+            "description": "Explanation of dependency"
+          }
+        },
+        "required": ["sourceEventId", "targetEventId", "dependencyType"]
+      },
+      "description": "Links to prerequisite and consequent events"
+    },
+    "leadingIndicators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "indicatorId": { "type": "string" },
+          "name": { "type": "string" },
+          "source": { "type": "string", "description": "Data source (URL, API, manual)" },
+          "frequency": {
+            "type": "string",
+            "enum": ["daily", "weekly", "monthly", "annual"]
+          },
+          "expectedTrend": {
+            "type": "string",
+            "enum": ["upward", "downward", "stable", "cyclic"]
+          },
+          "correlationWithEvent": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Historical correlation (0=unrelated, 1=perfect predictor)"
+          },
+          "latestValue": { "type": "number" },
+          "latestDate": { "type": "string", "format": "date-time" },
+          "trendVector": {
+            "type": "number",
+            "description": "Rate of change per unit time"
+          },
+          "predictedContribution": {
+            "type": "object",
+            "properties": {
+              "deltaYears": {
+                "type": "number",
+                "description": "This indicator suggests event is X years ahead/behind"
+              },
+              "confidence": { "type": "number" },
+              "explanation": { "type": "string" }
+            }
+          }
+        }
+      },
+      "description": "Measurable signals that predict this event"
+    }
+  },
+  
+  "definitions": {
+    "uncertaintyRange": {
+      "type": "object",
+      "properties": {
+        "p10": { "type": "number" },
+        "p25": { "type": "number" },
+        "p50": { "type": "number" },
+        "p75": { "type": "number" },
+        "p90": { "type": "number" }
+      },
+      "required": ["p10", "p50", "p90"]
+    }
+  },
+  
+  "examples": {
+    "event_with_forecast": {
+      "id": "fusion-commercialization",
+      "title": "Fusion Energy Commercialization",
+      "category": "energy",
+      "year": 2050,
+      "description": "First commercially viable fusion reactor reaches market",
+      
+      "forecast": {
+        "eventId": "fusion-commercialization",
+        "forecastId": "f-fusion-c-2025-05",
+        "createdAt": "2025-05-20T00:00:00Z",
+        "updatedAt": "2025-05-20T00:00:00Z",
+        "timing": {
+          "uncertaintyRange": {
+            "p10": 2042,
+            "p25": 2045,
+            "p50": 2050,
+            "p75": 2056,
+            "p90": 2062
+          }
+        },
+        "confidence": 0.65,
+        "forecastStatus": "active-forecast",
+        "claimStrengthLevel": "level-2-confident",
+        "degradationSignal": 0.0,
+        "predictiveHorizon": 20,
+        "assumptionSet": "baseline-2025",
+        "updateHistory": [
+          {
+            "timestamp": "2025-05-20T00:00:00Z",
+            "oldP50": 2055,
+            "newP50": 2050,
+            "reason": "NIF achieved sustained ignition (March 2025)",
+            "triggeringSignals": ["nif-gain-milestone"],
+            "modelVersion": "v2.3"
+          }
+        ],
+        "scenarioForecasts": [
+          {
+            "scenario": "acceleration",
+            "probability": 0.25,
+            "p50Year": 2042,
+            "description": "Rapid progress: multiple startup breakthroughs, big funding"
+          },
+          {
+            "scenario": "stagnation",
+            "probability": 0.50,
+            "p50Year": 2052,
+            "description": "Business as usual: slow incremental progress"
+          },
+          {
+            "scenario": "disruption",
+            "probability": 0.15,
+            "p50Year": 2065,
+            "description": "Major setback: accident or regulatory ban"
+          },
+          {
+            "scenario": "wild-card",
+            "probability": 0.10,
+            "p50Year": 2035,
+            "description": "Breakthrough in alternative approach (aneutronic fusion)"
+          }
+        ],
+        "modelBreakdown": [
+          {
+            "model": "baseline-statistical",
+            "p50Year": 2051,
+            "confidence": 0.68,
+            "explanation": "Weibull hazard model fitted to 60 years of fusion progress"
+          },
+          {
+            "model": "graph-propagation",
+            "p50Year": 2048,
+            "confidence": 0.62,
+            "explanation": "Accelerated by AI-designed materials (2040) and quantum computing (2045)"
+          },
+          {
+            "model": "monte-carlo-scenario",
+            "p50Year": 2049,
+            "confidence": 0.70,
+            "explanation": "Blended across 4 scenarios; stagnation most likely"
+          },
+          {
+            "model": "expert-prior",
+            "p50Year": 2050,
+            "confidence": 0.50,
+            "explanation": "Expert consensus (energy community survey, 2025)"
+          }
+        ]
+      },
+      
+      "dependencies": [
+        {
+          "sourceEventId": "ai-general-intelligence",
+          "targetEventId": "fusion-commercialization",
+          "dependencyType": "accelerating",
+          "strength": 0.6,
+          "lagTime": 3,
+          "description": "AGI enables AI-designed plasma control and materials discovery"
+        },
+        {
+          "sourceEventId": "room-temp-superconductor",
+          "targetEventId": "fusion-commercialization",
+          "dependencyType": "accelerating",
+          "strength": 0.8,
+          "lagTime": 2,
+          "description": "Superconducting magnets are critical for fusion reactors"
+        },
+        {
+          "sourceEventId": "fusion-commercialization",
+          "targetEventId": "planetary-engineering",
+          "dependencyType": "enabling",
+          "strength": 0.7,
+          "lagTime": 5,
+          "description": "Abundant energy enables large-scale planetary intervention"
+        }
+      ],
+      
+      "leadingIndicators": [
+        {
+          "indicatorId": "nif-energy-gain",
+          "name": "NIF Energy Gain Ratio",
+          "source": "https://www.llnl.gov/news",
+          "frequency": "quarterly",
+          "expectedTrend": "upward",
+          "correlationWithEvent": 0.85,
+          "latestValue": 1.8,
+          "latestDate": "2025-03-15T00:00:00Z",
+          "trendVector": 0.25,
+          "predictedContribution": {
+            "deltaYears": -4,
+            "confidence": 0.80,
+            "explanation": "Recent gain improvements suggest 4-year acceleration vs. baseline"
+          }
+        },
+        {
+          "indicatorId": "fusion-venture-funding",
+          "name": "Private Fusion Venture Funding",
+          "source": "crunchbase_api",
+          "frequency": "monthly",
+          "expectedTrend": "upward",
+          "correlationWithEvent": 0.65,
+          "latestValue": 2500,
+          "latestDate": "2025-05-15T00:00:00Z",
+          "trendVector": 100,
+          "predictedContribution": {
+            "deltaYears": 0,
+            "confidence": 0.60,
+            "explanation": "Funding on track with historical growth; no acceleration yet"
+          }
+        }
+      ]
+    }
+  }
+}

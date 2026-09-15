@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-05-25T00:49:51.688Z",
+  "agents": {
+    "librarian": {
+      "alertCount": 1,
+      "alerts": [
+        {
+          "metric": "ditaCoverage",
+          "label": "DITA Migration Coverage",
+          "value": 0,
+          "threshold": 50,
+          "severity": "P2",
+          "message": "DITA Migration Coverage: 0% (< 50% threshold)"
+        }
+      ],
+      "status": "INFO"
+    },
+    "editor": {
+      "alertCount": 0,
+      "alerts": [],
+      "status": "OK"
+    },
+    "strategist": {
+      "alertCount": 0,
+      "alerts": [],
+      "status": "OK"
+    },
+    "gatekeeper": {
+      "alertCount": 1,
+      "alerts": [
+        {
+          "metric": "p0Failures",
+          "label": "P0 ENG Test Failures",
+          "value": 1,
+          "threshold": 0,
+          "severity": "P0",
+          "message": "P0 ENG Test Failures: 1% (> 0% threshold)"
+        }
+      ],
+      "status": "CRITICAL"
+    },
+    "orchestrator": {
+      "alertCount": 1,
+      "alerts": [
+        {
+          "metric": "jiraClosureRate",
+          "label": "JIRA Closure Rate",
+          "value": 48,
+          "threshold": 95,
+          "severity": "P1",
+          "message": "JIRA Closure Rate: 48% (< 95% threshold)"
+        }
+      ],
+      "status": "WARNING"
+    }
+  },
+  "totalAlerts": 3
+}

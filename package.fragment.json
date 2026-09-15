@@ -1,0 +1,38 @@
+{
+  "_comment": "Merge these into your repo package.json. Keep your existing fields.",
+  "scripts": {
+    "build-report": "node scripts/generate-build-report.mjs && node scripts/dita-loss-scanner.mjs --out=static/data/dita-loss-report.json && node scripts/threshold-watcher.mjs && node scripts/generate-search-data.mjs",
+    "dev:all": "node scripts/dev-all.mjs",
+    "librarian:server": "node scripts/librarian-server.mjs",
+    "librarian:activate": "node scripts/librarian-activate.mjs",
+    "librarian:dry-run": "node scripts/librarian-activate.mjs --dry-run",
+    "editor:server": "node scripts/editor-server.mjs",
+    "editor:registry:build": "node scripts/parse-style-rules.mjs",
+    "editor:activate": "npm run editor:registry:build && node scripts/editor-activate.mjs",
+    "editor:dry-run": "npm run editor:registry:build && node scripts/editor-activate.mjs --dry-run",
+    "orchestrator:server": "node scripts/orchestrator-server.mjs",
+    "strategist:server": "node scripts/strategist-server.mjs",
+    "strategist:activate": "node scripts/strategist-activate.mjs",
+    "strategist:dry-run": "node scripts/strategist-activate.mjs --dry-run",
+    "gatekeeper:server": "node scripts/gatekeeper-server.mjs",
+    "gatekeeper:activate": "node scripts/gatekeeper-activate.mjs",
+    "gatekeeper:dry-run": "node scripts/gatekeeper-activate.mjs --dry-run",
+    "validate:pods": "node scripts/validate-pod-outputs.mjs",
+    "terminology:generate": "node scripts/generate-terminology-map.mjs",
+    "terminology:scan": "node scripts/scan-terminology-drift.mjs",
+    "terminology": "npm run terminology:generate && npm run terminology:scan",
+    "verify:integrations": "node scripts/verify-integrations.mjs"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.0",
+    "@docusaurus/preset-classic": "3.10.0",
+    "clsx": "^2.0.0",
+    "fuse.js": "^7.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "marked": "^18.0.3"
+  }
+}

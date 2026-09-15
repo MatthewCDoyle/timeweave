@@ -1,0 +1,11 @@
+{
+  "label": "02 Industrial Era",
+  "position": 2,
+  "collapsed": false,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index",
+    "title": "Industrial Era",
+    "description": "Infrastructure-defining breakthroughs from 1800 to 1999."
+  }
+}

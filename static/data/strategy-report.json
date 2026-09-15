@@ -1,0 +1,60 @@
+{
+  "pod": "STRATEGIST",
+  "runId": "cf11ac25-fc12-4ca5-8aae-53a72e94ba3a",
+  "snapshotDate": "2026-05-08T15:36:09.262Z",
+  "freshness": {
+    "fresh": 533,
+    "recent": 0,
+    "aging": 0,
+    "stale": 0,
+    "freshPercent": 100,
+    "stalePercent": 0,
+    "staleDocs": []
+  },
+  "thinContent": {
+    "threshold": 150,
+    "thinDocs": [],
+    "count": 0
+  },
+  "searchGaps": {
+    "totalQueries": 0,
+    "uniqueQueries": 0,
+    "missedSearches": [],
+    "topQueries": []
+  },
+  "seoHealth": {
+    "seoScorePercent": 87,
+    "fieldCoverage": {
+      "hasTitle": 533,
+      "hasDescription": 513,
+      "hasKeywords": 533,
+      "hasSlug": 275
+    }
+  },
+  "clickBehavior": {
+    "searchToDocAbandonment": 0.18,
+    "deadEndNavRate": 0.07,
+    "returnToSearchRate": 0.14,
+    "copyEventRate": 0.09,
+    "navBacktrackRate": 0.11
+  },
+  "accessibility": {
+    "wcagLevel": "AA",
+    "criticalErrors": 0,
+    "imagesWithoutAlt": {
+      "count": 0,
+      "files": []
+    },
+    "docsWithIssues": 0
+  },
+  "i18n": {
+    "configuredLocales": [
+      "en"
+    ],
+    "defaultLocale": "en",
+    "translationCoverage": {
+      "en": 100
+    }
+  },
+  "recommendations": []
+}

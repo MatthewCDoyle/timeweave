@@ -1,0 +1,11 @@
+{
+  "label": "03 The Now",
+  "position": 3,
+  "collapsed": false,
+  "collapsible": true,
+  "link": {
+    "type": "generated-index",
+    "title": "The Now",
+    "description": "Current convergence signals and active technology trajectories."
+  }
+}

@@ -1,5 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 
+const isDevBuild = process.env.NODE_ENV !== 'production' || process.env.BUILD_DEV === 'true';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Timeweave',
@@ -38,7 +40,21 @@ const config = {
         sidebarPath: './sidebars-timeline.js',
       },
     ],
+    ...(isDevBuild ? [
+      [
+        '@docusaurus/plugin-content-pages',
+        {
+          id: 'dev-pages',
+          path: 'src/dev-pages',
+          routeBasePath: '/',
+        },
+      ],
+    ] : []),
   ],
+  customFields: {
+    // Dashboard is disabled for production/internal builds unless BUILD_DEV=true.
+    isDev: isDevBuild,
+  },
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -49,12 +65,23 @@ const config = {
         title: 'Timeweave',
         items: [
           {
-            type: 'docSidebar',
-            docsPluginId: 'timeline',
-            sidebarId: 'timelineSidebar',
+            to: '/timeline-view',
             position: 'left',
             label: 'Timeline',
           },
+          {
+            to: '/relationships',
+            position: 'left',
+            label: 'Relationships',
+          },
+          ...(isDevBuild ? [
+            {
+              to: '/dev-dashboard',
+              position: 'right',
+              label: 'Developer Tools',
+              className: 'button button--secondary button--sm',
+            },
+          ] : []),
         ],
       },
       prism: {

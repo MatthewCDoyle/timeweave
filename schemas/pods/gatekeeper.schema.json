@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["pod", "runId", "snapshotDate", "buildStatus", "releaseReady", "engTests", "buildStability", "operationalHealth"],
+  "properties": {
+    "pod": { "const": "GATEKEEPER" },
+    "runId": { "type": "string", "minLength": 1 },
+    "snapshotDate": { "type": "string", "minLength": 1 },
+    "buildStatus": { "type": "string" },
+    "releaseReady": { "type": "boolean" },
+    "engTests": { "type": "object" },
+    "buildStability": { "type": "object" },
+    "lighthouseCI": { "type": "object" },
+    "playwrightE2E": { "type": "object" },
+    "dependencies": { "type": "object" },
+    "pdfCoverage": { "type": "object" },
+    "operationalHealth": { "type": "object" },
+    "remediations": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/remediation" }
+    }
+  },
+  "additionalProperties": true
+}

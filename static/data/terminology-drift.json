@@ -1,0 +1,2397 @@
+{
+  "generatedAt": "2026-05-09T03:45:23.121Z",
+  "scope": "all",
+  "filesScanned": 533,
+  "filesWithDrift": 85,
+  "totalFindings": 240,
+  "bySeverity": {
+    "high": 171,
+    "medium": 69,
+    "low": 0
+  },
+  "byRule": {
+    "RULE-019": 171,
+    "RULE-020": 69
+  },
+  "byVariant": {
+    "appear": 14,
+    "highlight": 7,
+    "screen": 90,
+    "w/": 8,
+    "drop-down": 33,
+    "perform": 26,
+    "whether or not": 5,
+    "e.g.,": 8,
+    "Internet": 20,
+    "utilize": 4,
+    "click on": 2,
+    "once": 8,
+    "i.e.,": 4,
+    "like": 4,
+    "username": 5,
+    "is able to": 2
+  },
+  "byCanonical": {
+    "display (v.)": 14,
+    "select": 7,
+    "window": 90,
+    "with": 8,
+    "dropdown (adj.)": 33,
+    "do": 26,
+    "whether": 5,
+    "for example,": 8,
+    "such as": 8,
+    "internet": 20,
+    "use": 4,
+    "click": 2,
+    "after": 4,
+    "when": 4,
+    "user name": 5,
+    "can": 2
+  },
+  "topFiles": [
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "count": 9
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "count": 9
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "count": 8
+    },
+    {
+      "file": "docs/licensing/t-bridging-an-internet-connection-to-fs-vs-devices.mdx",
+      "count": 7
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-5-0-13000.mdx",
+      "count": 7
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-2-70000.mdx",
+      "count": 7
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-1-70000.mdx",
+      "count": 6
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-0-12.mdx",
+      "count": 6
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-1-6.mdx",
+      "count": 6
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-2-7.mdx",
+      "count": 6
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-3.mdx",
+      "count": 6
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-run-mode.mdx",
+      "count": 6
+    },
+    {
+      "file": "docs/fs80-prg/fs80-about-this-guide/r-notational-conventions.mdx",
+      "count": 5
+    },
+    {
+      "file": "docs/js-guide/r-notational-conventions.mdx",
+      "count": 5
+    },
+    {
+      "file": "docs/user-guide/about-this-guide/r-notational-conventions.mdx",
+      "count": 5
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-sending-results-to-a-plc-device.mdx",
+      "count": 5
+    },
+    {
+      "file": "docs/xs20-prg/xs20-about-this-guide/r-notational-conventions.mdx",
+      "count": 5
+    },
+    {
+      "file": "docs/ziml-prg/ziml-about-this-guide/r-notational-conventions.mdx",
+      "count": 5
+    },
+    {
+      "file": "docs/fs42-prg/fs42-using-the-device/r-fs-vs-symbologies.mdx",
+      "count": 4
+    },
+    {
+      "file": "docs/js-guide/c-aurora-js-example-script-lifecycle.mdx",
+      "count": 4
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-0-22000.mdx",
+      "count": 4
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-7-0-51000.mdx",
+      "count": 4
+    },
+    {
+      "file": "docs/release-notes/_release-notes-template.mdx",
+      "count": 4
+    },
+    {
+      "file": "docs/user-guide/connect/t-af-ug-sftp-ftp-settings-and-best-practices.mdx",
+      "count": 4
+    },
+    {
+      "file": "docs/user-guide/fixed-industrial-tools/c-af-ug-symbologies.mdx",
+      "count": 4
+    }
+  ],
+  "topVariants": [
+    {
+      "variant": "screen",
+      "count": 90
+    },
+    {
+      "variant": "drop-down",
+      "count": 33
+    },
+    {
+      "variant": "perform",
+      "count": 26
+    },
+    {
+      "variant": "Internet",
+      "count": 20
+    },
+    {
+      "variant": "appear",
+      "count": 14
+    },
+    {
+      "variant": "w/",
+      "count": 8
+    },
+    {
+      "variant": "e.g.,",
+      "count": 8
+    },
+    {
+      "variant": "once",
+      "count": 8
+    },
+    {
+      "variant": "highlight",
+      "count": 7
+    },
+    {
+      "variant": "whether or not",
+      "count": 5
+    },
+    {
+      "variant": "username",
+      "count": 5
+    },
+    {
+      "variant": "utilize",
+      "count": 4
+    },
+    {
+      "variant": "i.e.,",
+      "count": 4
+    },
+    {
+      "variant": "like",
+      "count": 4
+    },
+    {
+      "variant": "click on",
+      "count": 2
+    },
+    {
+      "variant": "is able to",
+      "count": 2
+    }
+  ],
+  "findings": [
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 34,
+      "column": 79,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 36,
+      "column": 17,
+      "variant": "highlight",
+      "canonical": "select",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 37,
+      "column": 27,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 40,
+      "column": 14,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 42,
+      "column": 21,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 43,
+      "column": 25,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 46,
+      "column": 12,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 48,
+      "column": 19,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-about-this-guide/r-notational-conventions.mdx",
+      "line": 56,
+      "column": 77,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-technical-reference/t-fs-vs-using-parameter-barcodes.mdx",
+      "line": 39,
+      "column": 64,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs10-prg/fs10-technical-reference/t-fs-vs-using-parameter-barcodes.mdx",
+      "line": 39,
+      "column": 95,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 31,
+      "column": 79,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 33,
+      "column": 17,
+      "variant": "highlight",
+      "canonical": "select",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 34,
+      "column": 27,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 37,
+      "column": 14,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 39,
+      "column": 21,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 40,
+      "column": 25,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 43,
+      "column": 12,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 45,
+      "column": 19,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-about-this-guide/r-notational-conventions.mdx",
+      "line": 53,
+      "column": 77,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "line": 45,
+      "column": 91,
+      "variant": "w/",
+      "canonical": "with",
+      "ruleId": "RULE-020",
+      "severity": "medium",
+      "note": "except in table headers"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "line": 47,
+      "column": 91,
+      "variant": "w/",
+      "canonical": "with",
+      "ruleId": "RULE-020",
+      "severity": "medium",
+      "note": "except in table headers"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "line": 49,
+      "column": 91,
+      "variant": "w/",
+      "canonical": "with",
+      "ruleId": "RULE-020",
+      "severity": "medium",
+      "note": "except in table headers"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "line": 51,
+      "column": 91,
+      "variant": "w/",
+      "canonical": "with",
+      "ruleId": "RULE-020",
+      "severity": "medium",
+      "note": "except in table headers"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "line": 69,
+      "column": 87,
+      "variant": "w/",
+      "canonical": "with",
+      "ruleId": "RULE-020",
+      "severity": "medium",
+      "note": "except in table headers"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "line": 71,
+      "column": 87,
+      "variant": "w/",
+      "canonical": "with",
+      "ruleId": "RULE-020",
+      "severity": "medium",
+      "note": "except in table headers"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "line": 73,
+      "column": 87,
+      "variant": "w/",
+      "canonical": "with",
+      "ruleId": "RULE-020",
+      "severity": "medium",
+      "note": "except in table headers"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-getting-started/t-fs42-configurations.mdx",
+      "line": 75,
+      "column": 87,
+      "variant": "w/",
+      "canonical": "with",
+      "ruleId": "RULE-020",
+      "severity": "medium",
+      "note": "except in table headers"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-installation/t-aurora-focus-configuring-ziml-with-fs42.mdx",
+      "line": 53,
+      "column": 104,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-using-the-device/r-fs-vs-symbologies.mdx",
+      "line": 43,
+      "column": 699,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-using-the-device/r-fs-vs-symbologies.mdx",
+      "line": 43,
+      "column": 1007,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-using-the-device/r-fs-vs-symbologies.mdx",
+      "line": 61,
+      "column": 1239,
+      "variant": "whether or not",
+      "canonical": "whether",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/fs42-prg/fs42-using-the-device/r-fs-vs-symbologies.mdx",
+      "line": 63,
+      "column": 140,
+      "variant": "whether or not",
+      "canonical": "whether",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-about-this-guide/r-notational-conventions.mdx",
+      "line": 31,
+      "column": 79,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-about-this-guide/r-notational-conventions.mdx",
+      "line": 33,
+      "column": 17,
+      "variant": "highlight",
+      "canonical": "select",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-about-this-guide/r-notational-conventions.mdx",
+      "line": 34,
+      "column": 27,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-about-this-guide/r-notational-conventions.mdx",
+      "line": 37,
+      "column": 14,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-about-this-guide/r-notational-conventions.mdx",
+      "line": 39,
+      "column": 21,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-installation/t-fs80-connecting-to-the-lght-x-light-accessory.mdx",
+      "line": 37,
+      "column": 1,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-installation/t-fs80-connecting-to-the-lght-x-light-accessory.mdx",
+      "line": 47,
+      "column": 10,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-installation/t-fs80-connecting-to-the-lght-x-light-accessory.mdx",
+      "line": 67,
+      "column": 10,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/fs80-prg/fs80-using-the-device/t-fs80-updating-the-device-firmware.mdx",
+      "line": 39,
+      "column": 10,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/js-guide/c-aurora-js-example-script-lifecycle.mdx",
+      "line": 64,
+      "column": 107,
+      "variant": "e.g.,",
+      "canonical": "for example,",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/js-guide/c-aurora-js-example-script-lifecycle.mdx",
+      "line": 64,
+      "column": 107,
+      "variant": "e.g.,",
+      "canonical": "such as",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/js-guide/c-aurora-js-example-script-lifecycle.mdx",
+      "line": 73,
+      "column": 109,
+      "variant": "e.g.,",
+      "canonical": "for example,",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/js-guide/c-aurora-js-example-script-lifecycle.mdx",
+      "line": 73,
+      "column": 109,
+      "variant": "e.g.,",
+      "canonical": "such as",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/js-guide/r-notational-conventions.mdx",
+      "line": 18,
+      "column": 28,
+      "variant": "highlight",
+      "canonical": "select",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/js-guide/r-notational-conventions.mdx",
+      "line": 19,
+      "column": 29,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/js-guide/r-notational-conventions.mdx",
+      "line": 22,
+      "column": 16,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/js-guide/r-notational-conventions.mdx",
+      "line": 24,
+      "column": 23,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/js-guide/r-notational-conventions.mdx",
+      "line": 29,
+      "column": 79,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/js-guide/t-aurora-focus-getting-started-and-mdx-summary.mdx",
+      "line": 108,
+      "column": 16,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/js-guide/t-aurora-js-operation-mode.mdx",
+      "line": 25,
+      "column": 102,
+      "variant": "utilize",
+      "canonical": "use",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/licensing/t-aurora-acquiring-an-emulator-license-key.mdx",
+      "line": 39,
+      "column": 32,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-aurora-acquiring-an-emulator-license-key.mdx",
+      "line": 59,
+      "column": 68,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-aurora-licensing-frequently-asked-questions.mdx",
+      "line": 61,
+      "column": 38,
+      "variant": "utilize",
+      "canonical": "use",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/licensing/t-bridging-an-internet-connection-to-fs-vs-devices.mdx",
+      "line": 39,
+      "column": 46,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-bridging-an-internet-connection-to-fs-vs-devices.mdx",
+      "line": 53,
+      "column": 10,
+      "variant": "click on",
+      "canonical": "click",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-bridging-an-internet-connection-to-fs-vs-devices.mdx",
+      "line": 53,
+      "column": 48,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-bridging-an-internet-connection-to-fs-vs-devices.mdx",
+      "line": 61,
+      "column": 38,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-bridging-an-internet-connection-to-fs-vs-devices.mdx",
+      "line": 61,
+      "column": 239,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-bridging-an-internet-connection-to-fs-vs-devices.mdx",
+      "line": 79,
+      "column": 46,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-bridging-an-internet-connection-to-fs-vs-devices.mdx",
+      "line": 87,
+      "column": 167,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-fs-vs-acquiring-an-activation-id.mdx",
+      "line": 41,
+      "column": 32,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/licensing/t-fs-vs-acquiring-an-activation-id.mdx",
+      "line": 61,
+      "column": 68,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-1-200-2001.mdx",
+      "line": 112,
+      "column": 100,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-1-200-2001.mdx",
+      "line": 157,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-2-0-8000.mdx",
+      "line": 177,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-3-0-10000.mdx",
+      "line": 196,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-3-1-40000.mdx",
+      "line": 204,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-4-0-23000.mdx",
+      "line": 220,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-5-0-13000.mdx",
+      "line": 92,
+      "column": 77,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-5-0-13000.mdx",
+      "line": 95,
+      "column": 56,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-5-0-13000.mdx",
+      "line": 98,
+      "column": 108,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-5-0-13000.mdx",
+      "line": 98,
+      "column": 115,
+      "variant": "once",
+      "canonical": "after",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-5-0-13000.mdx",
+      "line": 98,
+      "column": 115,
+      "variant": "once",
+      "canonical": "when",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-5-0-13000.mdx",
+      "line": 101,
+      "column": 27,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-5-0-13000.mdx",
+      "line": 254,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-0-22000.mdx",
+      "line": 87,
+      "column": 86,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-0-22000.mdx",
+      "line": 89,
+      "column": 107,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-0-22000.mdx",
+      "line": 99,
+      "column": 53,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-0-22000.mdx",
+      "line": 263,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-1-70000.mdx",
+      "line": 83,
+      "column": 74,
+      "variant": "i.e.,",
+      "canonical": "for example,",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-1-70000.mdx",
+      "line": 83,
+      "column": 74,
+      "variant": "i.e.,",
+      "canonical": "such as",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-1-70000.mdx",
+      "line": 83,
+      "column": 150,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-1-70000.mdx",
+      "line": 92,
+      "column": 36,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-1-70000.mdx",
+      "line": 103,
+      "column": 53,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-1-70000.mdx",
+      "line": 284,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-2-70000.mdx",
+      "line": 68,
+      "column": 27,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-2-70000.mdx",
+      "line": 73,
+      "column": 74,
+      "variant": "i.e.,",
+      "canonical": "for example,",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-2-70000.mdx",
+      "line": 73,
+      "column": 74,
+      "variant": "i.e.,",
+      "canonical": "such as",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-2-70000.mdx",
+      "line": 73,
+      "column": 150,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-2-70000.mdx",
+      "line": 82,
+      "column": 36,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-2-70000.mdx",
+      "line": 93,
+      "column": 53,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-6-2-70000.mdx",
+      "line": 290,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-7-0-48000.mdx",
+      "line": 115,
+      "column": 39,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-7-0-48000.mdx",
+      "line": 116,
+      "column": 27,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-7-0-48000.mdx",
+      "line": 305,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-7-0-51000.mdx",
+      "line": 114,
+      "column": 46,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-7-0-51000.mdx",
+      "line": 126,
+      "column": 39,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-7-0-51000.mdx",
+      "line": 127,
+      "column": 27,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-7-0-51000.mdx",
+      "line": 315,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-0-12.mdx",
+      "line": 112,
+      "column": 64,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-0-12.mdx",
+      "line": 113,
+      "column": 53,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-0-12.mdx",
+      "line": 170,
+      "column": 46,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-0-12.mdx",
+      "line": 183,
+      "column": 39,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-0-12.mdx",
+      "line": 184,
+      "column": 27,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-0-12.mdx",
+      "line": 375,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-1-6.mdx",
+      "line": 96,
+      "column": 64,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-1-6.mdx",
+      "line": 97,
+      "column": 57,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-1-6.mdx",
+      "line": 173,
+      "column": 46,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-1-6.mdx",
+      "line": 186,
+      "column": 39,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-1-6.mdx",
+      "line": 187,
+      "column": 27,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-1-6.mdx",
+      "line": 378,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-2-7.mdx",
+      "line": 118,
+      "column": 64,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-2-7.mdx",
+      "line": 119,
+      "column": 57,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-2-7.mdx",
+      "line": 210,
+      "column": 46,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-2-7.mdx",
+      "line": 218,
+      "column": 39,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-2-7.mdx",
+      "line": 219,
+      "column": 27,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-2-7.mdx",
+      "line": 399,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-3.mdx",
+      "line": 109,
+      "column": 64,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-3.mdx",
+      "line": 110,
+      "column": 57,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-3.mdx",
+      "line": 234,
+      "column": 46,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-3.mdx",
+      "line": 246,
+      "column": 39,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-3.mdx",
+      "line": 247,
+      "column": 27,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-3.mdx",
+      "line": 439,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-4.mdx",
+      "line": 115,
+      "column": 15,
+      "variant": "whether or not",
+      "canonical": "whether",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/rn-af-release-notes-9-4.mdx",
+      "line": 233,
+      "column": 3,
+      "variant": "Internet",
+      "canonical": "internet",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/release-notes/_release-notes-template.mdx",
+      "line": 41,
+      "column": 24,
+      "variant": "e.g.,",
+      "canonical": "for example,",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/_release-notes-template.mdx",
+      "line": 41,
+      "column": 24,
+      "variant": "e.g.,",
+      "canonical": "such as",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/_release-notes-template.mdx",
+      "line": 62,
+      "column": 115,
+      "variant": "e.g.,",
+      "canonical": "for example,",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/release-notes/_release-notes-template.mdx",
+      "line": 62,
+      "column": 115,
+      "variant": "e.g.,",
+      "canonical": "such as",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/about-this-guide/r-notational-conventions.mdx",
+      "line": 30,
+      "column": 79,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/about-this-guide/r-notational-conventions.mdx",
+      "line": 32,
+      "column": 17,
+      "variant": "highlight",
+      "canonical": "select",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/about-this-guide/r-notational-conventions.mdx",
+      "line": 33,
+      "column": 27,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/about-this-guide/r-notational-conventions.mdx",
+      "line": 36,
+      "column": 14,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/about-this-guide/r-notational-conventions.mdx",
+      "line": 38,
+      "column": 21,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/aurora-focus-web-hmi/c-af-ug-web-hmi-dashboard.mdx",
+      "line": 53,
+      "column": 421,
+      "variant": "utilize",
+      "canonical": "use",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/aurora-focus-web-hmi/t-af-ug-fs-vs-firmware-update.mdx",
+      "line": 35,
+      "column": 30,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/aurora-focus-web-hmi/t-af-ug-fs-vs-firmware-update.mdx",
+      "line": 38,
+      "column": 7,
+      "variant": "click on",
+      "canonical": "click",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/aurora-focus-web-hmi/t-af-ug-fs-vs-firmware-update.mdx",
+      "line": 55,
+      "column": 67,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/build/c-af-ug-advanced-filtering-and-formatting.mdx",
+      "line": 47,
+      "column": 92,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/build/c-af-ug-advanced-filtering-and-formatting.mdx",
+      "line": 53,
+      "column": 67,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/build/c-af-ug-bqm.mdx",
+      "line": 33,
+      "column": 122,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/build/c-af-ug-custom-formatting.mdx",
+      "line": 40,
+      "column": 46,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/build/c-af-ug-custom-formatting.mdx",
+      "line": 41,
+      "column": 40,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/build/t-af-ug-using-fixturing-tools.mdx",
+      "line": 46,
+      "column": 58,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/build/t-af-ug-using-set-and-get-match-strings.mdx",
+      "line": 42,
+      "column": 51,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/build/t-af-ug-using-ssi-mode.mdx",
+      "line": 54,
+      "column": 89,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/capture/g-af-ug-plc-trigger-modes.mdx",
+      "line": 41,
+      "column": 39,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/capture/g-af-ug-plc-trigger-modes.mdx",
+      "line": 41,
+      "column": 201,
+      "variant": "once",
+      "canonical": "after",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/capture/g-af-ug-plc-trigger-modes.mdx",
+      "line": 41,
+      "column": 201,
+      "variant": "once",
+      "canonical": "when",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/connect/t-af-js-using-the-js-editor.mdx",
+      "line": 53,
+      "column": 267,
+      "variant": "like",
+      "canonical": "for example,",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/connect/t-af-js-using-the-js-editor.mdx",
+      "line": 53,
+      "column": 267,
+      "variant": "like",
+      "canonical": "such as",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/connect/t-af-ug-sftp-ftp-settings-and-best-practices.mdx",
+      "line": 38,
+      "column": 112,
+      "variant": "username",
+      "canonical": "user name",
+      "ruleId": "RULE-019",
+      "severity": "high",
+      "note": "unless the UI uses this"
+    },
+    {
+      "file": "docs/user-guide/connect/t-af-ug-sftp-ftp-settings-and-best-practices.mdx",
+      "line": 41,
+      "column": 66,
+      "variant": "username",
+      "canonical": "user name",
+      "ruleId": "RULE-019",
+      "severity": "high",
+      "note": "unless the UI uses this"
+    },
+    {
+      "file": "docs/user-guide/connect/t-af-ug-sftp-ftp-settings-and-best-practices.mdx",
+      "line": 43,
+      "column": 14,
+      "variant": "username",
+      "canonical": "user name",
+      "ruleId": "RULE-019",
+      "severity": "high",
+      "note": "unless the UI uses this"
+    },
+    {
+      "file": "docs/user-guide/connect/t-af-ug-sftp-ftp-settings-and-best-practices.mdx",
+      "line": 43,
+      "column": 107,
+      "variant": "username",
+      "canonical": "user name",
+      "ruleId": "RULE-019",
+      "severity": "high",
+      "note": "unless the UI uses this"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/c-af-ug-failure-timeout.mdx",
+      "line": 36,
+      "column": 38,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/c-af-ug-failure-timeout.mdx",
+      "line": 36,
+      "column": 81,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-attributes.mdx",
+      "line": 34,
+      "column": 54,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-configuring-alarms.mdx",
+      "line": 37,
+      "column": 49,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-configuring-alarms.mdx",
+      "line": 38,
+      "column": 55,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-configuring-alarms.mdx",
+      "line": 40,
+      "column": 49,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-configuring-follower-devices.mdx",
+      "line": 33,
+      "column": 34,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-configuring-the-database.mdx",
+      "line": 34,
+      "column": 106,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-gpio-mirroring.mdx",
+      "line": 38,
+      "column": 35,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-gpio-mirroring.mdx",
+      "line": 38,
+      "column": 78,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-gpio-mirroring.mdx",
+      "line": 40,
+      "column": 73,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-gpio-pass-fail.mdx",
+      "line": 36,
+      "column": 35,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-gpio-pass-fail.mdx",
+      "line": 36,
+      "column": 78,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-gpio-pass-fail.mdx",
+      "line": 39,
+      "column": 47,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-gpio-triggering.mdx",
+      "line": 35,
+      "column": 35,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-gpio-triggering.mdx",
+      "line": 35,
+      "column": 78,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-modbus-configuration.mdx",
+      "line": 36,
+      "column": 59,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-plc-configuration.mdx",
+      "line": 36,
+      "column": 22,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-run-mode.mdx",
+      "line": 41,
+      "column": 38,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-run-mode.mdx",
+      "line": 41,
+      "column": 63,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-run-mode.mdx",
+      "line": 42,
+      "column": 71,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-run-mode.mdx",
+      "line": 47,
+      "column": 427,
+      "variant": "once",
+      "canonical": "after",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-run-mode.mdx",
+      "line": 47,
+      "column": 427,
+      "variant": "once",
+      "canonical": "when",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-run-mode.mdx",
+      "line": 51,
+      "column": 24,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-sending-results-to-a-plc-device.mdx",
+      "line": 33,
+      "column": 36,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-sending-results-to-a-plc-device.mdx",
+      "line": 33,
+      "column": 78,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-sending-results-to-a-plc-device.mdx",
+      "line": 34,
+      "column": 52,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-sending-results-to-a-plc-device.mdx",
+      "line": 36,
+      "column": 30,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-sending-results-to-a-plc-device.mdx",
+      "line": 38,
+      "column": 70,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-serial-triggering.mdx",
+      "line": 37,
+      "column": 35,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-serial-triggering.mdx",
+      "line": 37,
+      "column": 74,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-setting-up-follower-devices.mdx",
+      "line": 41,
+      "column": 30,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-setting-up-follower-devices.mdx",
+      "line": 41,
+      "column": 73,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-string-filtering.mdx",
+      "line": 53,
+      "column": 38,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-string-filtering.mdx",
+      "line": 53,
+      "column": 81,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-tcp-ip-triggering.mdx",
+      "line": 36,
+      "column": 35,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-tcp-ip-triggering.mdx",
+      "line": 36,
+      "column": 78,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-tcp-ip-triggering.mdx",
+      "line": 38,
+      "column": 49,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-gateway-solutions/t-af-ug-zeti-with-followers.mdx",
+      "line": 33,
+      "column": 31,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/connectivity-guidelines/c-af-ug-configuring-a-job-on-the-device-to-accept-serial-triggers.mdx",
+      "line": 40,
+      "column": 25,
+      "variant": "is able to",
+      "canonical": "can",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/device-discovery/c-aurora-setting-up-an-emulator.mdx",
+      "line": 33,
+      "column": 40,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/device-discovery/c-aurora-setting-up-an-emulator.mdx",
+      "line": 35,
+      "column": 77,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/device-discovery/t-aurora-updating-firmware-on-multiple-devices.mdx",
+      "line": 34,
+      "column": 48,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/device-discovery/t-aurora-updating-firmware-on-multiple-devices.mdx",
+      "line": 38,
+      "column": 21,
+      "variant": "username",
+      "canonical": "user name",
+      "ruleId": "RULE-019",
+      "severity": "high",
+      "note": "unless the UI uses this"
+    },
+    {
+      "file": "docs/user-guide/device-discovery/t-fs10-xs20-Device-Discovery.mdx",
+      "line": 28,
+      "column": 87,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/device-discovery/t-fs10-xs20-Setting-an-IP-Address.mdx",
+      "line": 29,
+      "column": 144,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/fixed-industrial-tools/c-af-ug-manycode.mdx",
+      "line": 44,
+      "column": 193,
+      "variant": "once",
+      "canonical": "after",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/fixed-industrial-tools/c-af-ug-manycode.mdx",
+      "line": 44,
+      "column": 193,
+      "variant": "once",
+      "canonical": "when",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/fixed-industrial-tools/c-af-ug-settings.mdx",
+      "line": 47,
+      "column": 462,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/fixed-industrial-tools/c-af-ug-symbologies.mdx",
+      "line": 42,
+      "column": 699,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/fixed-industrial-tools/c-af-ug-symbologies.mdx",
+      "line": 42,
+      "column": 1007,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/fixed-industrial-tools/c-af-ug-symbologies.mdx",
+      "line": 60,
+      "column": 1239,
+      "variant": "whether or not",
+      "canonical": "whether",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/fixed-industrial-tools/c-af-ug-symbologies.mdx",
+      "line": 62,
+      "column": 140,
+      "variant": "whether or not",
+      "canonical": "whether",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/getting-started/c-aurora-localization.mdx",
+      "line": 30,
+      "column": 123,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-blob-count.mdx",
+      "line": 37,
+      "column": 63,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-datacode.mdx",
+      "line": 68,
+      "column": 193,
+      "variant": "is able to",
+      "canonical": "can",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-flaw-detection.mdx",
+      "line": 27,
+      "column": 22,
+      "variant": "perform",
+      "canonical": "do",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-flaw-detection.mdx",
+      "line": 30,
+      "column": 212,
+      "variant": "like",
+      "canonical": "for example,",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-flaw-detection.mdx",
+      "line": 30,
+      "column": 212,
+      "variant": "like",
+      "canonical": "such as",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-read-barcode.mdx",
+      "line": 48,
+      "column": 465,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-read-barcode.mdx",
+      "line": 51,
+      "column": 528,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-read-dpm.mdx",
+      "line": 42,
+      "column": 380,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/machine-vision-tools/c-af-ug-using-image-types.mdx",
+      "line": 27,
+      "column": 31,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/regex/t-af-ug-focus-regex-examples.mdx",
+      "line": 34,
+      "column": 88,
+      "variant": "utilize",
+      "canonical": "use",
+      "ruleId": "RULE-020",
+      "severity": "medium"
+    },
+    {
+      "file": "docs/user-guide/ui-overview/c-aurora-ui-overview.mdx",
+      "line": 36,
+      "column": 25,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/user-guide/ui-overview/c-aurora-ui-overview.mdx",
+      "line": 44,
+      "column": 225,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/xs20-prg/xs20-about-this-guide/r-notational-conventions.mdx",
+      "line": 31,
+      "column": 79,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/xs20-prg/xs20-about-this-guide/r-notational-conventions.mdx",
+      "line": 33,
+      "column": 17,
+      "variant": "highlight",
+      "canonical": "select",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/xs20-prg/xs20-about-this-guide/r-notational-conventions.mdx",
+      "line": 34,
+      "column": 27,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/xs20-prg/xs20-about-this-guide/r-notational-conventions.mdx",
+      "line": 37,
+      "column": 14,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/xs20-prg/xs20-about-this-guide/r-notational-conventions.mdx",
+      "line": 39,
+      "column": 21,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/xs20-prg/xs20-technical-reference/t-fs-vs-using-parameter-barcodes.mdx",
+      "line": 35,
+      "column": 64,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/xs20-prg/xs20-technical-reference/t-fs-vs-using-parameter-barcodes.mdx",
+      "line": 35,
+      "column": 95,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-about-this-guide/r-notational-conventions.mdx",
+      "line": 31,
+      "column": 79,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-about-this-guide/r-notational-conventions.mdx",
+      "line": 33,
+      "column": 17,
+      "variant": "highlight",
+      "canonical": "select",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-about-this-guide/r-notational-conventions.mdx",
+      "line": 34,
+      "column": 27,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-about-this-guide/r-notational-conventions.mdx",
+      "line": 37,
+      "column": 14,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-about-this-guide/r-notational-conventions.mdx",
+      "line": 39,
+      "column": 21,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-sw-config/t-fs80-connecting-to-the-lght-x-light-accessory.mdx",
+      "line": 37,
+      "column": 1,
+      "variant": "screen",
+      "canonical": "window",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-sw-config/t-fs80-connecting-to-the-lght-x-light-accessory.mdx",
+      "line": 47,
+      "column": 10,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-sw-config/t-fs80-connecting-to-the-lght-x-light-accessory.mdx",
+      "line": 67,
+      "column": 10,
+      "variant": "drop-down",
+      "canonical": "dropdown (adj.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    },
+    {
+      "file": "docs/ziml-prg/ziml-using-the-device/t-lght-x-illumination-operation.mdx",
+      "line": 33,
+      "column": 137,
+      "variant": "appear",
+      "canonical": "display (v.)",
+      "ruleId": "RULE-019",
+      "severity": "high"
+    }
+  ],
+  "truncated": false,
+  "sourceMapSha": "7a4e77e44eddc40c154b4aa1754505ac7f8a3699"
+}

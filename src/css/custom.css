@@ -7,3 +7,77 @@
   --ifm-color-primary-lighter: #7e6eff;
   --ifm-color-primary-lightest: #9184ff;
 }
+
+.image-placeholder {
+  margin: 1.5rem 0;
+}
+
+.image-placeholder--center {
+  text-align: center;
+}
+
+.image-placeholder--wrap-right {
+  float: right;
+  width: 40%;
+  margin: 0.25rem 0 1rem 1.25rem;
+}
+
+.image-placeholder--wrap-left {
+  float: left;
+  width: 40%;
+  margin: 0.25rem 1.25rem 1rem 0;
+}
+
+.image-placeholder__frame {
+  border: 2px dashed #64748b;
+  border-radius: 10px;
+  background: #f5f3f0;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  min-height: 260px;
+  max-width: 250px;
+  max-height: 340px;
+}
+
+@media (max-width: 996px) {
+  .image-placeholder--wrap-right,
+  .image-placeholder--wrap-left {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+html.docs-doc-page.plugin-id-timeline.docs-doc-id-index .main-wrapper .container {
+  max-width: min(99vw, 2600px) !important;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+html.docs-doc-page.plugin-id-timeline.docs-doc-id-index .theme-doc-markdown {
+  max-width: none;
+}
+
+html.docs-doc-page.plugin-id-timeline.docs-doc-id-index .row {
+  --ifm-spacing-horizontal: 0.6rem;
+}
+
+@media (min-width: 997px) {
+  html.docs-doc-page.plugin-id-timeline.docs-doc-id-index [class*='docMainContainer_'] {
+    max-width: 100% !important;
+  }
+
+  html.docs-doc-page.plugin-id-timeline.docs-doc-id-index [class*='docItemCol_'] {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+  }
+
+  html.docs-doc-page.plugin-id-timeline.docs-doc-id-index [class*='docItemContainer_'] {
+    max-width: none;
+  }
+}
