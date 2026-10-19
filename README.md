@@ -1,4 +1,4 @@
-# Dashboard Export — Zebra Docs Agentic System
+# Dashboard Export — Docs Agentic System
 
 Drop-in bundle for the five-pod multi-agent dashboard + agent runtime.
 Exported from `zebra-aurora-docs-on-demand` on 2026-05-25.
